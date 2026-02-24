@@ -1,9 +1,35 @@
 import React, { useState } from 'react'
 const Products = () => {
-    const [liked, setLiked] = useState(false);
-    const [liked1, setLiked1] = useState(false);
-    const [liked2, setLiked2] = useState(false);
+    const [liked, setLiked] = useState({});
     const [activeButton, setActiveButton] = useState(null);
+
+    const products = [
+        {
+            id: 1,
+            name: 'Round Yoga Mat',
+            price: '€14.95',
+            image: '/Products1.png'
+        },
+        {
+            id: 2,
+            name: 'Non-Slip Travel Yoga Mat',
+            price: '€14.95',
+            image: '/Products2.png'
+        },
+        {
+            id: 3,
+            name: 'Foldable Yoga Mat',
+            price: '€31.95',
+            image: '/Products3.png'
+        }
+    ];
+
+    const toggleLike = (id) => {
+        setLiked(prev => ({
+            ...prev,
+            [id]: !prev[id]
+        }));
+    };
 
 
     return (
@@ -38,100 +64,37 @@ const Products = () => {
                     </div>
                 </div>
                 <div className='max-w-285 h-full mx-auto flex flex-row gap-6'>
-                    <div >
-                        <div className='bg-[#F5F5F5] w-91 h-110.25 hover:bg-[#0000004D] hover:scale-[1.1] transition-transform duration-200 '>
-                            <div className='w-79 justify-between mx-auto pt-6 flex flex-row'>
-                                <div className='w-25 h-11 rounded-[88px] bg-[#FFFFFF] flex justify-center items-center'>€14.95</div>
-                                <div className='w-8.75 h-8.75 rounded-[50%] bg-[#FFFFFF] flex justify-center items-center' onClick={() => (
-                                    setLiked1(!liked1)
-                                )} >
-                                    <svg
-                                        width="22"
-                                        height="20"
-                                        viewBox="0 0 22 20"
-                                        fill={liked1 ? "green" : "none"}
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M6.5 1C3.4625 1 1 3.4625 1 6.5C1 12 7.5 17 11 18.163C14.5 17 21 12 21 6.5C21 3.4625 18.5375 1 15.5 1C13.64 1 11.995 1.9235 11 3.337C10.4928 2.6146 9.81908 2.02505 9.03577 1.61824C8.25245 1.21144 7.38265 0.999377 6.5 1Z"
-                                            stroke="green"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-                                    </svg>
+                    {products.map((product) => (
+                        <div key={product.id}>
+                            <div className='bg-[#F5F5F5] w-91 h-110.25 hover:bg-[#0000004D] hover:scale-[1.1] transition-transform duration-200'>
+                                <div className='w-79 justify-between mx-auto pt-6 flex flex-row'>
+                                    <div className='w-25 h-11 rounded-[88px] bg-[#FFFFFF] flex justify-center items-center'>{product.price}</div>
+                                    <div className='w-8.75 h-8.75 rounded-[50%] bg-[#FFFFFF] flex justify-center items-center' onClick={() => toggleLike(product.id)}>
+                                        <svg
+                                            width="22"
+                                            height="20"
+                                            viewBox="0 0 22 20"
+                                            fill={liked[product.id] ? "green" : "none"}
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M6.5 1C3.4625 1 1 3.4625 1 6.5C1 12 7.5 17 11 18.163C14.5 17 21 12 21 6.5C21 3.4625 18.5375 1 15.5 1C13.64 1 11.995 1.9235 11 3.337C10.4928 2.6146 9.81908 2.02505 9.03577 1.61824C8.25245 1.21144 7.38265 0.999377 6.5 1Z"
+                                                stroke="green"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className=' justify-center flex items  w-92 h-80 items-center absolute top-1/2 -translate-y-1/2 transition-all duration-200 linear group-hover:right-0'>
-                                <button onClick={() => (setCount  (count + 1))} className=' cursor-pointer active:bg-[#007a70] bg-[#01C6B5] w-35.5 h-14.25 text-[20px] font-medium text-white '>Add to cart </button>
-                            </div>
-                            <img src="/Products1.png" alt="" className='mx-auto mt-13' />
-                        </div>
-                        <h1 className='flex justify-center mt-6 font-normal text-[24px]'>Round Yoga Mat</h1>
-                    </div>
-                    <div >
-                        <div className='bg-[#F5F5F5] w-91 h-110.25 hover:bg-[#0000004D] hover:scale-[1.1] transition-transform duration-200 '>
-                            <div className='w-79 justify-between mx-auto pt-6 flex flex-row'>
-                                <div className='w-25 h-11 rounded-[88px] bg-[#FFFFFF] flex justify-center items-center'>€14.95</div>
-                                <div className='w-8.75 h-8.75 rounded-[50%] bg-[#FFFFFF] flex justify-center items-center' onClick={() => (
-                                    setLiked(!liked)
-                                )}>
-                                    <svg
-                                        width="22"
-                                        height="20"
-                                        viewBox="0 0 22 20"
-                                        fill={liked ? "green" : "none"}
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M6.5 1C3.4625 1 1 3.4625 1 6.5C1 12 7.5 17 11 18.163C14.5 17 21 12 21 6.5C21 3.4625 18.5375 1 15.5 1C13.64 1 11.995 1.9235 11 3.337C10.4928 2.6146 9.81908 2.02505 9.03577 1.61824C8.25245 1.21144 7.38265 0.999377 6.5 1Z"
-                                            stroke="green"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-                                    </svg>
+                                <div className=' justify-center flex items  w-92 h-80 items-center absolute top-1/2 -translate-y-1/2 transition-all duration-200 linear group-hover:right-0'>
+                                    <button className=' cursor-pointer active:bg-[#007a70] bg-[#01C6B5] w-35.5 h-14.25 text-[20px] font-medium text-white '>Add to cart</button>
                                 </div>
+                                <img src={product.image} alt="" className='mx-auto mt-13' />
                             </div>
-                            <div className=' justify-center flex items  w-92 h-80 items-center absolute top-1/2 -translate-y-1/2 transition-all duration-200 linear group-hover:right-0'>
-                                <button onClick={() => (setCount  (count + 1))} className=' cursor-pointer active:bg-[#007a70] bg-[#01C6B5] w-35.5 h-14.25 text-[20px] font-medium text-white '>Add to cart</button>
-                            </div>
-                            <img src="/Products2.png" alt="" className='mx-auto mt-13' />
+                            <h1 className='flex justify-center mt-6 font-normal text-[24px]'>{product.name}</h1>
                         </div>
-                        <h1 className='flex justify-center mt-6 font-normal text-[24px]'>Non-Slip Travel Yoga Mat</h1>
-                    </div>
-                    <div >
-                        <div className='bg-[#F5F5F5] w-91 h-110.25 hover:bg-[#0000004D] hover:scale-[1.1] transition-transform duration-200'>
-
-                            <div className='w-79 justify-between mx-auto pt-6 flex flex-row'>
-                                <div className='w-25 h-11 rounded-[88px] bg-[#FFFFFF] flex justify-center items-center'>€31.95</div>
-                                <div className='w-8.75 h-8.75 rounded-[50%] bg-[#FFFFFF] flex justify-center items-center' onClick={() => (
-                                    setLiked2(!liked2)
-                                )} >
-                                    <svg
-                                        width="22"
-                                        height="20"
-                                        viewBox="0 0 22 20"
-                                        fill={liked2 ? "green" : "none"}
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M6.5 1C3.4625 1 1 3.4625 1 6.5C1 12 7.5 17 11 18.163C14.5 17 21 12 21 6.5C21 3.4625 18.5375 1 15.5 1C13.64 1 11.995 1.9235 11 3.337C10.4928 2.6146 9.81908 2.02505 9.03577 1.61824C8.25245 1.21144 7.38265 0.999377 6.5 1Z"
-                                            stroke="green"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div className=' justify-center flex items  w-92 h-80 items-center absolute top-1/2 -translate-y-1/2 transition-all duration-200 linear group-hover:right-0'>
-                                <button className=' cursor-pointer active:bg-[#007a70] bg-[#01C6B5] w-35.5 h-14.25 text-[20px] font-medium text-white '>Add to cart</button>
-                            </div>
-                            <img src="/Products3.png" alt="" className='mx-auto ' />
-                        </div>
-                        <h1 className='flex justify-center mt-6 font-normal text-[24px]'>Foldable Yoga Mat</h1>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Slider from './Slider'
 import Products from './Products'
 import Categary from './Categary'
+import Trending from './Trending'
 
 
 function App() {
@@ -93,7 +94,8 @@ function App() {
       <Navbar />
       <Slider />
       <Products />
-      <Categary/>
+      <Categary />
+      <Trending/>
     </>
   )
 }
