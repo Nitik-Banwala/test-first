@@ -5,6 +5,9 @@ import Slider from './Slider'
 import Products from './Products'
 import Categary from './Categary'
 import Trending from './Trending'
+import Service from './Service'
+import Footer from './Footer'
+import Blog from './Blog'
 
 
 function App() {
@@ -95,7 +98,10 @@ function App() {
       <Slider />
       <Products />
       <Categary />
-      <Trending/>
+      <Trending />
+      <Service />
+      <Blog/>
+      <Footer/>
     </>
   )
 }

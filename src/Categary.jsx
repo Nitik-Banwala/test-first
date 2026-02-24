@@ -1,15 +1,7 @@
-import React, { useState } from 'react'
+
 
 const Categary = () => {
-    const [liked1, setLiked1] = useState({});
-
-    const toggleLike = (id) => {
-        setLiked1(prev => ({
-            ...prev,
-            [id]: !prev[id]
-        }));
-    };
-
+ 
     const carddata = [
         {
             id: 1,
@@ -124,7 +116,7 @@ const Categary = () => {
                                     width="22"
                                     height="20"
                                     viewBox="0 0 22 20"
-                                    fill={liked1[cards.id] ? "green" : "none"}
+                                    fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
                                 >
                                     <path
