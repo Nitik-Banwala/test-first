@@ -8,6 +8,8 @@ import Trending from './Trending'
 import Service from './Service'
 import Footer from './Footer'
 import Blog from './Blog'
+import Newsletter from './Newsletter'
+import Accordion from './Accordian'
 
 
 function App() {
@@ -100,7 +102,9 @@ function App() {
       <Categary />
       <Trending />
       <Service />
-      <Blog/>
+      <Blog />
+      <Accordion/>
+      <Newsletter/>
       <Footer/>
     </>
   )

@@ -1,6 +1,11 @@
 import React from 'react'
 import LikeButton from './Likebutton'
 
+const Star = () => (
+    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.70465 14.8452L3.6993 18.4484L5.28471 11.6263L0 7.01424L6.96621 6.43772L9.70465 -1.52588e-05L12.4431 6.43772L19.4093 7.01424L14.1246 11.6263L15.71 18.4484L9.70465 14.8452Z" fill="#FFA800" />
+    </svg>
+);
 const Trending = () => {
     const Trendingcards = [{
         id: 1,
@@ -28,32 +33,41 @@ const Trending = () => {
     ]
     return (
         <div>
-            <div className='max-w-285 mx-auto mt-35'>
+            <div className='max-w-285 mx-auto mt-16 sm:mt-24 lg:mt-35 px-4 sm:px-6 lg:px-0'>
                 <div>
-                    <h1 className='text-5xl font-semibold'>Trending Product's</h1>
-                    <p className='text-[20px] font-normal text-[#414143]'>Use this area to describe the collection.</p>
+                    <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold'>Trending Product's</h1>
+                    <p className='text-base sm:text-lg md:text-[20px] font-normal text-[#414143] mt-1 sm:mt-2'>Use this area to describe the collection.</p>
                 </div>
             </div>
-            <div className='flex flex-row max-w-285 mx-auto gap-6'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-285 mx-auto mt-8 sm:mt-10 gap-4 sm:gap-6 px-4 sm:px-6 lg:px-0'>
                 {Trendingcards.map((cardss) => (
-                    <div key={cardss.id} >
-                        <div className='p-4 shadow-xl w-91 '>
-                            <div className=' absolute flex justify-end w-78 pt-4.75 '>
+                    <div key={cardss.id} className='group'>
+                        <div className='relative p-4 sm:p-5 shadow-lg bg-white h-full flex flex-col'>
+                            <div className='absolute top-3 sm:top-4 right-3 sm:right-4 z-10'>
                                 <LikeButton />
                             </div>
-                            <img src={cardss.image} alt="" />
-                            <div>
-                                <h1 className='font-medium text-2xl mt-4'>{cardss.heading}</h1>
-                                <h1 className='text-[16px] font-normal'>{cardss.des1}</h1>
-                                <h1 className='text-[16px] font-normal'>{cardss.des2}</h1>
-                                <p className='font-medium text-2xl' >{cardss.price}</p>
+
+                            <img src={cardss.image} alt={cardss.heading} className='w-full h-auto object-cover rounded' />
+                            <div className='flex-1 flex flex-col'>
+                                <h1 className='font-medium text-lg sm:text-xl md:text-2xl mt-3 sm:mt-4 leading-snug'>{cardss.heading}</h1>
+                                <p className='text-sm sm:text-base font-normal mt-2 text-gray-700'>{cardss.des1}</p>
+                                <p className='text-sm sm:text-base font-normal text-gray-700'>{cardss.des2}</p>
+                                <div className='flex justify-between items-center mt-3 sm:mt-4'>
+                                    <p className='font-bold text-xl sm:text-2xl'>{cardss.price}</p>
+                                    <div className='flex gap-1 sm:gap-1.5'>
+                                        <Star />
+                                        <Star />
+                                        <Star />
+                                        <Star />
+                                    </div>
+                                </div>
                             </div>
-                            <button className='w-83 h-13.25 border cursor-pointer hover:bg-[#01C6B5] active:bg-[#02988b] hover:text-white'>Shop now</button>
+                            <button className='w-full mt-4 sm:mt-5 px-4 py-2 sm:py-3 border-2 border-[#01C6B5] text-sm sm:text-base font-medium cursor-pointer hover:bg-[#01C6B5] active:bg-[#02988b] hover:text-white transition-all duration-200 rounded'>
+                                Shop now
+                            </button>
                         </div>
                     </div>
                 ))}
-                <div className='p-4'>
-                </div>
             </div>
         </div>
     )

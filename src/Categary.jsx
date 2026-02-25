@@ -95,29 +95,28 @@ const Categary = () => {
     return (
 
         <div>
-            <div className='max-w-285 mx-auto flex mt-35 flex-row justify-between'>
+            <div className='max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-285 mx-auto flex mt-10 sm:mt-20 md:mt-28 lg:mt-35 flex-col sm:flex-row justify-between gap-4 px-4 sm:px-6 md:px-8 lg:px-0'>
                 <div>
-                    <h1 className='font-semibold text-5xl'>Shop Our Categories</h1>
-                    <p className='font-normal text-[#414143] text-[20px]'>Use this area to describe the collection.</p>
+                    <h1 className='font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>Shop Our Categories</h1>
+                    <p className='font-normal text-[#414143] text-sm sm:text-base md:text-lg lg:text-[20px] mt-2'>Use this area to describe the collection.</p>
                 </div>
-                <button className='w-31 h-14.25 border-0 mt-5.25 bg-[#01C6B5] text-white'>View All </button>
+                <button className='w-full sm:w-auto px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-3 lg:h-14.25 border-0 bg-[#01C6B5] text-white font-medium hover:bg-[#00a896] transition-colors whitespace-nowrap'>View All </button>
             </div>
-            <div className='grid grid-cols-4 gap-6 mt-10 max-w-285 mx-auto'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mt-6 sm:mt-8 md:mt-10 max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-285 mx-auto px-4 sm:px-6 md:px-8 lg:px-0'>
                 {carddata.map((cards) => (
                     <div key={cards.id}
-                        className='w-66.75 h-75.75 shadow-sm hover:bg-[#0000004D] hover:scale-[1.04] transition-transform duration-200 '
+                        className='w-full aspect-square sm:aspect-auto shadow-sm hover:bg-[#0000004D] hover:scale-[1.04] transition-transform duration-200 flex flex-col'
                      >
-                        <div className=' absolute  w-66.75 p-4  '>
-                            {cards.sale && <div><h1 className='text-white  w-12.75 h-6.5 bg-[#01C6B5] flex justify-center items-center'>{cards.sale}</h1></div>}
-                            </div>
-                        <div className=' absolute flex justify-end w-66.75 p-4  '>
-                            <div className='w-8.75 h-8.75  rounded-[50%] bg-[#FFFFFF] flex justify-center items-center' onClick={() => toggleLike(cards.id)}>
+                        <div className='relative w-full h-1/3'>
+                            {cards.sale && <div className='absolute top-2 left-2 sm:top-3 sm:left-3'><h1 className='text-white text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-1.5 bg-[#01C6B5] flex justify-center items-center rounded'>{cards.sale}</h1></div>}
+                            <div className='absolute top-2 right-2 sm:top-3 sm:right-3 w-7 h-7 sm:w-8.75 sm:h-8.75 rounded-[50%] bg-[#FFFFFF] flex justify-center items-center cursor-pointer hover:bg-gray-100 transition-colors' onClick={() => toggleLike(cards.id)}>
                                 <svg
-                                    width="22"
-                                    height="20"
+                                    width="18"
+                                    height="16"
                                     viewBox="0 0 22 20"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
+                                    className='w-4 h-4 sm:w-5 sm:h-5'
                                 >
                                     <path
                                         d="M6.5 1C3.4625 1 1 3.4625 1 6.5C1 12 7.5 17 11 18.163C14.5 17 21 12 21 6.5C21 3.4625 18.5375 1 15.5 1C13.64 1 11.995 1.9235 11 3.337C10.4928 2.6146 9.81908 2.02505 9.03577 1.61824C8.25245 1.21144 7.38265 0.999377 6.5 1Z"
@@ -129,15 +128,15 @@ const Categary = () => {
                                 </svg>
                             </div>
                         </div>
-                        <div className='w-66.75 h-62.75 flex justify-center items-center bg-[#EFEFEF]'>
-                            <img src={cards.image} alt="" className='hover:scale-[1.1] transition-transform duration-200'/>
-                            <div className=' justify-center flex items  w-92 h-80 items-center absolute top-1/2 -translate-y-1/2 transition-all duration-200 linear group-hover:right-0'>
-                                <button className=' cursor-pointer active:bg-[#007a70] bg-[#01C6B5] w-35.5 h-14.25 text-[20px] font-medium text-white '>Add to cart</button>
+                        <div className='w-full h-1/2 flex justify-center items-center bg-[#EFEFEF] relative group'>
+                            <img src={cards.image} alt={cards.dics} className='w-3/4 h-3/4 object-contain hover:scale-[1.1] transition-transform duration-200'/>
+                            <div className='hidden group-hover:flex justify-center items-center absolute inset-0'>
+                                <button className='cursor-pointer active:bg-[#007a70] bg-[#01C6B5] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg font-medium text-white rounded hover:bg-[#00a896] transition-colors'>Add to cart</button>
                             </div>
                         </div>
-                        <div className='flex w-59.25  mx-auto my-4 justify-between'>
-                            <h1>{cards.dics}</h1>
-                            <p>{cards.price}</p>
+                        <div className='flex flex-col w-full h-1/6 px-3 py-2 gap-1'>
+                            <h1 className='text-sm sm:text-base font-medium line-clamp-1'>{cards.dics}</h1>
+                            <p className='text-sm sm:text-base font-semibold text-[#01C6B5]'>{cards.price}</p>
                         </div>
                     </div>
                 ))}

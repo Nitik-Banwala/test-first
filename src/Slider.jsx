@@ -61,20 +61,20 @@ const Slider = () => {
                             }`}
                             style={{ backgroundImage: `url('${slide.image}')` }}
                         >
-                            <div className='z-20 text-white max-w-149.5 font-["Outfit",sans-serif] lg:ml-37.5 pt-58 h-full flex flex-col justify-center'>
-                                <h1 className='tracking-[18%] text-2xl font-normal'>{slide.subtitle}</h1>
-                                <h1 className='text-[62px] font-bold tracking-[-5%]'>{slide.title}</h1>
-                                <h1 className='font-normal text-[21px] max-w-2xl'>
+                            <div className='z-20 text-white max-w-full sm:max-w-3xl md:max-w-149.5 font-["Outfit",sans-serif] px-4 sm:px-8 md:ml-37.5 pt-12 sm:pt-20 md:pt-58 h-full flex flex-col justify-center'>
+                                <h1 className='tracking-[18%] text-lg sm:text-xl md:text-2xl font-normal'>{slide.subtitle}</h1>
+                                <h1 className='text-3xl sm:text-5xl md:text-[62px] font-bold tracking-[-5%] leading-tight'>{slide.title}</h1>
+                                <h1 className='font-normal text-base sm:text-lg md:text-[21px] max-w-2xl mt-2 sm:mt-4'>
                                     {slide.description}
                                 </h1>
-                                <button className='bg-[#01C6B5] w-35.5 h-14.25 text-[20px] font-medium mt-6'>Shop now</button>
+                                <button className='bg-[#01C6B5] w-32 sm:w-40 md:w-35.5 h-12 sm:h-13 md:h-14.25 text-base sm:text-lg md:text-[20px] font-medium mt-4 sm:mt-6 hover:bg-[#00a896] transition-colors'>Shop now</button>
                             </div>
                         </div>
                     ))}
 
                     <button
                         onClick={goToPrevSlide}
-                        className='absolute cursor-pointer left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all'
+                        className='absolute cursor-pointer left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 sm:p-3 rounded-full transition-all text-lg sm:text-xl'
                         aria-label='Previous slide'
                     >
                         ❮
@@ -82,7 +82,7 @@ const Slider = () => {
 
                     <button
                         onClick={goToNextSlide}
-                        className='absolute cursor-pointer right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all'
+                        className='absolute cursor-pointer right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 sm:p-3 rounded-full transition-all text-lg sm:text-xl'
                         aria-label='Next slide'
                     >
                         ❯
