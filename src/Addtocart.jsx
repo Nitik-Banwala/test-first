@@ -63,7 +63,7 @@ const Addtocart = () => {
             <div className='max-w-285 mx-auto p-4'>
                 <div className='max-w-285 mx-auto flex flex-row justify-between p-4 '> <h1 className='font-bold text-5xl'>Your cart </h1>
                     <Link to={"/"}>
-                        <p className='text-2xl font-bold text-[#414143] cursor-pointer'>Continue Shopping <br /> <span><div className='w-52 border bg-[#414143]'></div></span></p>
+                        <div className='text-2xl font-bold text-[#414143] cursor-pointer'>Continue Shopping <br /> <span><div className='w-52 border bg-[#414143]'></div></span></div>
                     </Link>
                 </div>
 
@@ -81,17 +81,20 @@ const Addtocart = () => {
                             <div key={index} className='flex flex-row justify-between items-center border-b border-[#4141431A] p-4'>
                                 <div className='flex-1 flex items-center gap-4'>
                                     <img src={item.image} alt={item.name} className='w-25 h-25' />
-                                    <span>{item.name}</span>
+                                    <div className='flex flex-col'>
+                                        <span>{item.name}</span>
+                                        <span>€{ item.price}</span>
+                                    </div>
                                 </div>
 
-                                <div className='flex-1 flex flex-row border w-55 h-11.5 justify-between items-center'>
+                                <div className=' flex flex-row border w-55 h-11.5 justify-between items-center'>
                                     <button 
                                         className='bg-[#414143] w-12 h-11 flex justify-center items-center text-white hover:opacity-80'
                                         onClick={() => handleDecreaseQuantity(index)}
                                     >
                                         -
                                     </button>
-                                    <h1 className='w-21.25 h-11 flex justify-center items-center'>
+                                    <h1 className='w-12.25 h-11 flex justify-center items-center'>
                                         {quantities[index] || 1}
                                     </h1>
                                     <button
@@ -119,19 +122,15 @@ const Addtocart = () => {
                         <div className='flex flex-row justify-end mt-8 p-4  '>
                             <div className='flex flex-col gap-4 w-80'>
                                 <div className='flex justify-between text-lg font-semibold'>
-                                    <span>Subtotal:</span>
-                                    <span>€{calculateCartTotal()}</span>
+                                        <span className='font-medium text-[16px]'>Estimated total </span>
+                                        <span className='font-semibold text-[16px]'>Dhs. {calculateCartTotal()} AED</span>
                                 </div>
-                                <div className='flex justify-between text-lg font-semibold'>
-                                    <span>Shipping:</span>
-                                    <span>€0.00</span>
-                                </div>
-                                <div className='flex justify-between text-2xl font-bold bg-[#4141431A] p-4 rounded'>
-                                    <span>Total:</span>
-                                    <span>€{calculateCartTotal()}</span>
+                                    <div className='font-normal text-[#414143] text-[14px]'>
+                                        <span>Taxes, discounts and shipping calculated at checkout. </span>
+
                                 </div>
                                 <button className='bg-[#01C6B5] text-white py-3 px-6 rounded font-semibold hover:opacity-90 transition'>
-                                    Proceed to Checkout
+                                     Checkout
                                 </button>
                             </div>
                         </div>

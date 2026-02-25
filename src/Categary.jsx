@@ -5,93 +5,98 @@ const Categary = () => {
     const carddata = [
         {
             id: 1,
-            name: '/Categories1.png',
-            price: '€14.95',
+            name: 'Insulated Sports Bottle',
+            price: '14.95',
             image: '/1.png',
             dics: 'Insulated Sports Bottle ',
         },
         {
             id: 2,
-            name: '/Categories2.png',
-            price: '€14.95',
+            name: 'Womens Long Wavy',
+            price: '14.95',
             image: '/CATEGORIES2.png',
             dics: 'Womens Long Wavy'
         },
         {
             id: 3,
-            name: '/Categories3.png',
-            price: '€14.95',
+            name: 'Acupressure Mat',
+            price: '14.95',
             image: '/CATEGORIES3.png',
             dics: 'Acupressure Mat'
         },
         {
             id: 4,
-            name: '/Categories4.png',
-            price: '€14.95',
+            name: 'Liberty Pattern Socks',
+            price: '14.95',
             image: '/CATEGORIES4.png',
             dics: 'Liberty Pattern Socks',
             sale: 'sale'
         },
         {
             id: 5,
-            name: '/Categories5.png',
-            price: '€14.95',
+            name: 'Mat Bag with Pocket',
+            price: '14.95',
             image: '/CATEGORIES5.png',
             dics: 'Mat Bag with Pocket'
         },
         {
             id: 6,
-            name: '/Categories6.png',
-            price: '€14.95',
+            name: 'Tibetan Singing Bowls',
+            price: '14.95',
             image: '/CATEGORIES6.png',
             dics: 'Tibetan Singing Bowls',
             sale: 'sale'
         },
         {
             id: 7,
-            name: '/ccccc.png',
-            price: '€14.95',
+            name: 'Soft Yoga Cushion',
+            price: '14.95',
             image: '/categories7.png',
             dics: 'Soft Yoga Cushion'
         }, {
             id: 8,
-            name: '/Categories8.png',
-            price: '€14.95',
+            name: 'Cotton Yoga Pants',
+            price: '14.95',
             image: '/CATEGORIES8.png',
             dics: 'Cotton Yoga Pants',
             sale: 'sale'
         },
         {
             id: 9,
-            name: '/Categories9.png',
-            price: '€14.95',
+            name: 'Womens Long Wavy',
+            price: '14.95',
             image: '/CATEGORIES9.png',
             dics: 'Womens Long Wavy',
             sale: 'sale'
         },
         {
             id: 10,
-            name: '/Categories10.png',
-            price: '€14.95',
+            name: 'Travel Yoga Bag',
+            price: '14.95',
             image: '/CATEGORIES10.png',
             dics: 'Travel Yoga Bag'
         },
         {
             id: 11,
-            name: '/Categories11.png',
-            price: '€14.95',
+            name: 'Yoga Workout Shorts',
+            price: '14.95',
             image: '/CATEGORIES11.png',
             dics: 'Yoga Workout Shorts',
             sale: 'sale'
         },
         {
             id: 12,
-            name: '/Categories12.png',
-            price: '€14.95',
+            name: 'Cork Yoga Mat',
+            price: '14.95',
             image: '/CATEGORIES12.png',
             dics: 'Cork Yoga Mat'
         },
     ];
+    const addToCart = (cards) => {
+        const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+        const updatedCart = [...existingCart, cards];
+        localStorage.setItem("cart", JSON.stringify(updatedCart));
+    };
     return (
 
         <div className="max-[640px]:flex max-[640px]:flex-col">
@@ -131,12 +136,12 @@ const Categary = () => {
                         <div className=' max-w-66.75 max-h-62.75 flex justify-center items-center bg-[#0000000D] relative group'>
                             <img src={cards.image} alt={cards.dics} className=' object-contain  h-61 w-full  bg-[#0000000D] '/>
                             <div className='hidden group-hover:flex justify-center items-center absolute inset-0'>
-                                <button className='cursor-pointer active:bg-[#007a70] bg-[#01C6B5] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg font-medium text-white rounded hover:bg-[#00a896] transition-colors'>Add to cart</button>
+                                <button onClick={() => addToCart(cards)} className='cursor-pointer active:bg-[#007a70] bg-[#01C6B5] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg font-medium text-white rounded hover:bg-[#00a896] transition-colors'>Add to cart</button>
                             </div>
                         </div>
                         <div className='flex flex-row w-full h-1/6 px-3 py-2  max-w-66.75 justify-between'>
                             <h1 className='text-sm sm:text-base font-medium line-clamp-1'>{cards.dics}</h1>
-                            <p className='text-sm sm:text-base font-semibold '>{cards.price}</p>
+                            <p className='text-sm sm:text-base font-semibold '>€{cards.price}</p>
                         </div>
                     </div>
                 ))}
