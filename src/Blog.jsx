@@ -25,7 +25,7 @@ const Blog = () => {
     return (
         <div className='px-4 sm:px-6 md:px-8 lg:px-35 flex items-center justify-center flex-col mt-10 sm:mt-16 md:mt-20'>
 
-            <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between w-full mb-6 sm:mb-8 gap-4'>
+            <div className='flex flex-col items-center sm:flex-row lg:items-start sm:items-center justify-between w-full mb-6 sm:mb-8 gap-4'>
                 <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold'>From The Blog</h2>
                 <button className='bg-[#01C6B5] text-white text-sm sm:text-[14px] md:text-[16px] font-medium px-4 sm:px-6 py-2 sm:py-3 cursor-pointer hover:bg-[#00a896] transition-colors whitespace-nowrap'>
                     View All Blogs

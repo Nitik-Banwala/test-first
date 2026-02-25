@@ -15,7 +15,7 @@ const Newsletter = () => {
                         Get weekly updates on the newest design stories, case studies and tips right in your mailbox.
                     </p>
                     
-                    <div className='border border-[#4141431A] p-1.5 w-full max-w-12 sm:w-auto sm:max-w-sm md:max-w-md justify-between flex flex-col sm:flex-row gap-2 sm:gap-0'>
+                    <div className='border border-[#4141431A] p-1.5 w-full max-w-72  sm:max-w-md md:max-w-lg justify-between flex flex-col sm:flex-row gap-2 sm:gap-0'>
                         <input 
                             type="email" 
                             placeholder='Email Address' 

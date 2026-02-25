@@ -16,57 +16,73 @@ const Footer = () => {
                         </p>
                         <div className="flex gap-3 sm:gap-4 mt-4">
                             <div className="w-8 h-8 sm:w-9 sm:h-9 border border-white text-white rounded-full flex items-center justify-center cursor-pointer hover:bg-white hover:text-black transition">
-                                <FaYoutube size={"15"} />
+                                <FaYoutube size={"15"}
+                                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
                             </div>
                             <div className="w-8 h-8 sm:w-9 sm:h-9 border border-white text-white rounded-full flex items-center justify-center cursor-pointer hover:bg-white hover:text-black transition">
-                                <FaFacebook size={"15"} />
+                                <FaFacebook size={"15"}
+                                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
                             </div>
                             <div className="w-8 h-8 sm:w-9 sm:h-9 border border-white text-white rounded-full flex items-center justify-center cursor-pointer hover:bg-white hover:text-black transition">
-                                <FaXTwitter size={"15"} />
+                                <FaXTwitter size={"15"}
+                                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
                             </div>
                             <div className="w-8 h-8 sm:w-9 sm:h-9 border border-white text-white rounded-full flex items-center justify-center cursor-pointer hover:bg-white hover:text-black transition">
-                                <FaLinkedinIn size={"15"} />
+                                <FaLinkedinIn size={"15"}
+                                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
                             </div>
                         </div>
                     </div>
                     <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 md:gap-20 lg:gap-39.25 w-full md:w-auto">
                         <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
-                            <h1 className="text-[#FAFAFA] font-medium text-base sm:text-lg md:text-xl leading-[100%]">
+                            <h1
+                              className="text-[#FAFAFA]  font-medium text-base sm:text-lg md:text-xl leading-[100%]">
                                 Quick Links
                             </h1>
-                            <p className="text-[#FAFAFA] font-normal text-base leading-[100%]">
+                            <p
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-base leading-[100%]">
                                 Leggings
                             </p>
-                            <p className="text-[#FAFAFA] font-normal text-base leading-[100%]">
+                            <p
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-base leading-[100%]">
                                 Women’s Clothing
                             </p>
-                            <p className="text-[#FAFAFA] font-normal text-base leading-[100%]">
+                            <p
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-base leading-[100%]">
                                 Men’s Clothing
                             </p>
-                            <p className="text-[#FAFAFA] font-normal text-base leading-[100%]">
+                            <p
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-base leading-[100%]">
                                 Yoga & Pilates Equipment
                             </p>
-                            <p className="text-[#FAFAFA] font-normal text-base leading-[100%]">
+                            <p
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-base leading-[100%]">
                                 Jewelry & Wellness
                             </p>
-                            <p className="text-[#FAFAFA] font-normal text-base leading-[100%]">
+                            <p
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-base leading-[100%]">
                                 Accessories
                             </p>
-                            <p className="text-[#FAFAFA] font-normal text-base leading-[100%]">
+                            <p
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-base leading-[100%]">
                                 Size Guide
                             </p>
                         </div>
                         <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
-                            <h1 className="text-[#FAFAFA] font-medium text-base sm:text-lg md:text-xl leading-[100%]">
+                            <h1
+                             className="text-[#FAFAFA]  font-medium text-base sm:text-lg md:text-xl leading-[100%]">
                                 Other links
                             </h1>
-                            <p className="text-[#FAFAFA] font-normal text-sm sm:text-base leading-[100%] hover:text-[#01C6B5] cursor-pointer transition">
+                            <p
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-sm sm:text-base leading-[100%] hover:text-[#01C6B5] cursor-pointer transition">
                                 Privacy Policy
                             </p>
-                            <p className="text-[#FAFAFA] font-normal text-sm sm:text-base leading-[100%] hover:text-[#01C6B5] cursor-pointer transition">
+                            <p
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-sm sm:text-base leading-[100%] hover:text-[#01C6B5] cursor-pointer transition">
                                 Terms of Service
                             </p>
-                            <p className="text-[#FAFAFA] font-normal text-sm sm:text-base leading-[100%] hover:text-[#01C6B5] cursor-pointer transition">
+                            <p
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-sm sm:text-base leading-[100%] hover:text-[#01C6B5] cursor-pointer transition">
                                 Terms of Service
                             </p>
                         </div>
@@ -74,7 +90,7 @@ const Footer = () => {
                 </div>
                 <div className="py-4 sm:py-5.25 w-full text-center border-t border-[#555555]">
                     <h1 className="text-[#FAFAFA] font-normal text-xs sm:text-sm md:text-base leading-[100%]">
-                        Copyright © 2025 Yogalis. All Rights Reserved
+                        Copyright © 2026 Yogalis. All Rights Reserved
                     </h1>
                 </div>
             </div>

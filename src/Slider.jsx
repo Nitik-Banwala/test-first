@@ -67,7 +67,7 @@ const Slider = () => {
                                 <h1 className='font-normal text-base sm:text-lg md:text-[21px] max-w-2xl mt-2 sm:mt-4'>
                                     {slide.description}
                                 </h1>
-                                <button className='bg-[#01C6B5]  w-32 sm:w-40 md:w-35.5 h-12 sm:h-13 md:h-14.25 text-base sm:text-lg md:text-[20px] font-medium mt-4 sm:mt-6 hover:bg-[#00a896] '>Shop now</button>
+                                <button className='bg-[#01C6B5]  w-32 sm:w-40 md:w-35.5 h-12 sm:h-13 md:h-14.25 text-base sm:text-lg md:text-[20px] font-medium mt-4 sm:mt-6 hover:bg-[#00a896] cursor-pointer  '>Shop now</button>
                             </div>
                         </div>
                     ))}

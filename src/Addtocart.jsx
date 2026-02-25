@@ -60,51 +60,55 @@ const Addtocart = () => {
         <div>
             <Addtocartnavbar />
 
-            <div className='max-w-285 mx-auto p-4'>
-                <div className='max-w-285 mx-auto flex flex-row justify-between p-4 '> <h1 className='font-bold text-5xl'>Your cart </h1>
-                    <Link to={"/"}>
-                        <div className='text-2xl font-bold text-[#414143] cursor-pointer'>Continue Shopping <br /> <span><div className='w-52 border bg-[#414143]'></div></span></div>
-                    </Link>
-                </div>
+                    <div className='max-w-285 mx-auto p-4'>
+                    <div className='max-w-285 mx-auto flex flex-col sm:flex-row justify-between p-4 items-start sm:items-center gap-4'>
+                        <h1 className='font-bold text-3xl sm:text-5xl'>Your cart</h1>
+                        <Link to={"/"}>
+                            <div className='text-base sm:text-2xl font-bold text-[#414143] cursor-pointer'>
+                                Continue Shopping
+                                <div className='mt-2 w-36 sm:w-52 h-1 bg-[#414143]'></div>
+                            </div>
+                        </Link>
+                    </div>
 
                 {cartItems.length === 0 ? (
                     <p>Your cart is empty </p>
                 ) : (
                     <div>
-                        <div className='flex flex-row bg-[#4141431A] p-7.25 justify-between'>
+                        <div className='hidden md:flex flex-row bg-[#4141431A] p-4 justify-between'>
                             <h1 className='flex text-left'>Product</h1>
                             <h1 className='flex text-center'>Quantity</h1>
                             <h1 className='flex text-right'>Total</h1>
                         </div>
 
                         {cartItems.map((item, index) => (
-                            <div key={index} className='flex flex-row justify-between items-center border-b border-[#4141431A] p-4'>
-                                <div className='flex-1 flex items-center gap-4'>
-                                    <img src={item.image} alt={item.name} className='w-25 h-25' />
+                            <div key={index} className='flex flex-col md:flex-row justify-between items-start md:items-center border-b border-[#4141431A] p-4 gap-4'>
+                                <div className='flex-1 flex items-start md:items-center gap-4'>
+                                    <img src={item.image} alt={item.name} className='w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover' />
                                     <div className='flex flex-col'>
-                                        <span>{item.name}</span>
-                                        <span>€{ item.price}</span>
+                                        <span className='font-medium'>{item.name}</span>
+                                        <span className='text-sm text-gray-600'>€{item.price}</span>
                                     </div>
                                 </div>
 
-                                <div className=' flex flex-row border w-55 h-11.5 justify-between items-center'>
-                                    <button 
-                                        className='bg-[#414143] w-12 h-11 flex justify-center items-center text-white hover:opacity-80'
+                                <div className='flex items-center md:flex-none border  overflow-hidden'>
+                                    <button
+                                        className='bg-[#414143] cursor-pointer px-4 py-2 flex justify-center items-center text-white hover:opacity-80'
                                         onClick={() => handleDecreaseQuantity(index)}
                                     >
                                         -
                                     </button>
-                                    <h1 className='w-12.25 h-11 flex justify-center items-center'>
+                                    <div className='px-4 py-2 flex justify-center items-center'>
                                         {quantities[index] || 1}
-                                    </h1>
+                                    </div>
                                     <button
-                                        className='bg-[#01C6B5] w-12 h-11 flex justify-center items-center text-white hover:opacity-80'
+                                        className='bg-[#01C6B5] cursor-pointer px-4 py-2 flex justify-center items-center text-white hover:opacity-80'
                                         onClick={() => handleIncreaseQuantity(index)}
                                     >
                                         +
                                     </button>
-                                    <button 
-                                        className='w-12 h-11 flex justify-center items-center hover:opacity-80'
+                                    <button
+                                        className='px-3 py-2 flex justify-center cursor-pointer items-center hover:opacity-80'
                                         onClick={() => handleDeleteItem(index)}
                                     >
                                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,13 +118,13 @@ const Addtocart = () => {
                                         </svg>
                                     </button>
                                 </div>
-                                <div className='flex-1 text-right'>
+                                <div className='flex-1 text-left md:text-right mt-2 md:mt-0'>
                                     €{calculateTotal(item.price, quantities[index] || 1)}
                                 </div>
                             </div>
                         ))}
-                        <div className='flex flex-row justify-end mt-8 p-4  '>
-                            <div className='flex flex-col gap-4 w-80'>
+                        <div className='flex justify-center md:justify-end mt-8 p-4'>
+                            <div className='flex flex-col gap-4 w-full max-w-xs md:w-80'>
                                 <div className='flex justify-between text-lg font-semibold'>
                                         <span className='font-medium text-[16px]'>Estimated total </span>
                                         <span className='font-semibold text-[16px]'>Dhs. {calculateCartTotal()} AED</span>
@@ -129,9 +133,9 @@ const Addtocart = () => {
                                         <span>Taxes, discounts and shipping calculated at checkout. </span>
 
                                 </div>
-                                <button className='bg-[#01C6B5] text-white py-3 px-6 rounded font-semibold hover:opacity-90 transition'>
-                                     Checkout
-                                </button>
+                                    <button className='bg-[#01C6B5] cursor-pointer text-white py-3 px-6  font-semibold hover:opacity-90 transition w-full md:w-auto'>
+                                        Checkout
+                                    </button>
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Addtocartnavbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -83,30 +84,48 @@ const Addtocartnavbar = () => {
                     </div>
                     {isMenuOpen && (
                         <div className='min-[1160px]:hidden bg-[#009B8F] px-4 pb-4 flex flex-col gap-3'>
+                            <Link to={"/"}>
                             <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Leggings <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
-                            </svg></span>
+                            </svg>
+                            </span>
                             </h1>
+                            </Link>
+                            <Link to={"/"}>
                             <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Women’s Clothing <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
-                            </svg></span>
+                            </svg>
+                            </span>
                             </h1>
+                            </Link>
+                            <Link to={"/"}>
                             <h1 className='text-white  text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Men’s Clothing <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
-                            </svg></span>
+                            </svg>
+                            </span>
                             </h1>
+                            </Link>
+                            <Link to={"/"}>
                             <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Yoga & Pilates Equipment <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
-                            </svg></span>
+                            </svg>
+                            </span>
                             </h1>
+                            </Link>
+                            <Link to={"/"}>
                             <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Jewelry & Wellness <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
-                            </svg></span>
+                            </svg>
+                            </span>
                             </h1>
+                            </Link>
+                            <Link to={"/"}>
                             <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Accessories <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
-                            </svg></span>
+                            </svg>
+                            </span>
                             </h1>
+                            </Link>
                             <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Size Guide </h1>
                         </div>
                     )}

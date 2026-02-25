@@ -34,8 +34,8 @@ const Trending = () => {
     return (
         <div>
             <div className='max-w-285 mx-auto mt-16 sm:mt-24 lg:mt-35 px-4 sm:px-6 lg:px-0'>
-                <div>
-                    <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold'>Trending Product's</h1>
+                <div className='lg:flex-none flex-col flex justify-center items-center lg:items-start px-4'>
+                    <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold '>Trending Product's</h1>
                     <p className='text-base sm:text-lg md:text-[20px] font-normal text-[#414143] mt-1 sm:mt-2'>Use this area to describe the collection.</p>
                 </div>
             </div>
