@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 
-
-const Navbar = () => {
+const Addtocartnavbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const toggleMenu = () => {
@@ -11,9 +9,9 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className='z-30'>
-                <div className='hidden sm:block w-full bg-white px-4'>
-                    <div className='max-w-285 mx-auto flex my-2.5 justify-between px-4 sm:px-6 lg:px-0'>
+            <div className='z-30 '>
+                <div className='hidden sm:block w-full bg-white'>
+                    <div className='max-w-285 mx-auto flex my-2.5 justify-between px-4 sm:px-6 lg:px-0 '>
                         <div className='flex flex-row items-center gap-3'>
                             <svg width="45" height="17" viewBox="0 0 45 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M40.4628 0H0V17H40.4628L45 9.48423L40.4628 0Z" fill="#01C6B5" />
@@ -36,28 +34,46 @@ const Navbar = () => {
                                 </svg>
                             </div>
                             <div className='border border-[#01C6B5] cursor-pointer rounded-[50%] w-7.5 h-7.5 items-center justify-center flex'>
-                                <Link to={"/addtocart"}>
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4.53516 10.9395C4.94493 10.9395 5.33817 11.1028 5.62793 11.3926C5.91755 11.6823 6.08008 12.0757 6.08008 12.4854C6.07997 12.8949 5.9174 13.2875 5.62793 13.5771C5.33817 13.8669 4.94493 14.0302 4.53516 14.0303C4.12533 14.0303 3.73218 13.8669 3.44238 13.5771C3.15282 13.2875 2.98937 12.8949 2.98926 12.4854C2.98926 12.0756 3.15267 11.6824 3.44238 11.3926C3.73218 11.1028 4.12533 10.9395 4.53516 10.9395ZM11.0391 10.9395C11.4488 10.9396 11.8421 11.1029 12.1318 11.3926C12.4214 11.6823 12.584 12.0757 12.584 12.4854C12.5839 12.8948 12.4212 13.2875 12.1318 13.5771C11.8421 13.8669 11.4488 14.0302 11.0391 14.0303C10.6292 14.0303 10.2361 13.8669 9.94629 13.5771C9.65665 13.2875 9.49327 12.895 9.49316 12.4854C9.49316 12.0755 9.65651 11.6824 9.94629 11.3926C10.2361 11.1028 10.6292 10.9395 11.0391 10.9395ZM4.53516 11.8623C4.37002 11.8623 4.21149 11.9282 4.09473 12.0449C3.97804 12.1617 3.91211 12.3203 3.91211 12.4854C3.91222 12.6502 3.97819 12.8082 4.09473 12.9248C4.21149 13.0416 4.37002 13.1074 4.53516 13.1074C4.70024 13.1074 4.85885 13.0415 4.97559 12.9248C5.09203 12.8082 5.15712 12.6502 5.15723 12.4854C5.15723 12.3204 5.09218 12.1617 4.97559 12.0449C4.85885 11.9282 4.70024 11.8623 4.53516 11.8623ZM11.0391 11.8623C10.8739 11.8623 10.7154 11.9282 10.5986 12.0449C10.4819 12.1617 10.416 12.3202 10.416 12.4854C10.4161 12.6503 10.482 12.8081 10.5986 12.9248C10.7154 13.0416 10.8739 13.1074 11.0391 13.1074C11.2041 13.1073 11.3618 13.0415 11.4785 12.9248C11.5952 12.8081 11.661 12.6503 11.6611 12.4854C11.6611 12.3202 11.5953 12.1617 11.4785 12.0449C11.3618 11.9283 11.204 11.8624 11.0391 11.8623ZM1.71094 0.100586L1.73633 0.161133L2.3252 1.5459H12.4844C12.8939 1.54601 13.2865 1.7085 13.5762 1.99805C13.866 2.28784 14.0293 2.68099 14.0293 3.09082C14.0293 3.47474 13.898 3.79862 13.6836 4.06055L11.582 6.86914C11.3041 7.26287 10.8417 7.52625 10.3164 7.52637H4.50293L3.97949 8.58594L3.91211 8.88086C3.91447 9.04271 3.9801 9.19788 4.09473 9.3125C4.21147 9.42913 4.37013 9.49414 4.53516 9.49414H12.584V10.417H4.53516C4.12543 10.417 3.73215 10.2545 3.44238 9.96484C3.15266 9.67512 2.98934 9.28179 2.98926 8.87207C2.98903 8.60991 3.0557 8.35146 3.18262 8.12207L3.68066 7.10547L1.10059 1.02246H0.0996094V0.100586H1.71094ZM4.4707 6.60352H10.3164C10.5216 6.60341 10.7023 6.50398 10.8145 6.35449L12.9824 3.46387L13.0361 3.38086C13.0823 3.29349 13.1064 3.19414 13.1064 3.09082C13.1064 2.92569 13.0406 2.76716 12.9238 2.65039C12.8072 2.53387 12.6492 2.46788 12.4844 2.46777H2.71289L4.4707 6.60352Z" fill="#01C6B5" stroke="#01C6B5" strokeWidth="0.2" />
-                                    </svg>
-                                </Link>
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='w-full bg-[#01C6B5] h-auto md:h-17.5'>
-                    <div className='max-w-285 mx-auto flex flex-row justify-between items-center h-auto sm:h-17.5 px-4 z-30 '>
+                <div className='w-full bg-[#01C6B5] h-auto sm:h-17.5 px-4'>
+                    <div className='max-w-285 mx-auto flex flex-row justify-between items-center h-auto sm:h-17.5 px-4 sm:px-6 lg:px-0 py-3 sm:py-0'>
                         <h1 className='text-white cursor-pointer shrink-0'><img src="/logo.png" alt="Logo" className='h-8 sm:h-auto' /></h1>
-                        <div className='hidden md:flex flex-row gap-9 text-white'>
-                            <h1 className='cursor-pointer hover:opacity-80 transition'>Home</h1>
-                            <h1 className='cursor-pointer hover:opacity-80 transition'>Contact</h1>
-                            <Link to={"/addtocart"}>
-                                <h1 className='cursor-pointer hover:opacity-80 transition'>Cart</h1>
-                            </Link>
+                        <div className='hidden min-[1160px]:flex flex-row gap-4 text-white'>
+                            <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Leggings <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
+                            </svg></span>
+                            </h1>
+                            <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Women’s Clothing <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
+                            </svg></span>
+                            </h1>
+                            <h1 className='text-white  text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Men’s Clothing <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
+                            </svg></span>
+                            </h1>
+                            <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Yoga & Pilates Equipment <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
+                            </svg></span>
+                            </h1>
+                            <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Jewelry & Wellness <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
+                            </svg></span>
+                            </h1>
+                            <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Accessories <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
+                            </svg></span>
+                            </h1>
+                            <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Size Guide </h1>
                         </div>
-                        <button 
+                        <button
                             onClick={toggleMenu}
-                            className='md:hidden flex flex-col justify-center items-center gap-1.5 ml-auto'
+                            className='min-[1160px]:hidden flex flex-col justify-center items-center gap-1.5 ml-auto'
                             aria-label="Toggle menu"
                         >
                             <div className={`w-6 h-0.5 bg-white transition-transform ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
@@ -66,12 +82,32 @@ const Navbar = () => {
                         </button>
                     </div>
                     {isMenuOpen && (
-                        <div className='md:hidden bg-[#009B8F] px-4 pb-4 flex flex-col gap-3'>
-                            <h1 className='text-white cursor-pointer py-2 hover:opacity-80 transition'>Home</h1>
-                            <h1 className='text-white cursor-pointer py-2 hover:opacity-80 transition'>Contact</h1>
-                            <Link to={"/addtocart"}>
-                                <h1 className='cursor-pointer hover:opacity-80 transition'>Cart</h1>
-                            </Link>
+                        <div className='min-[1160px]:hidden bg-[#009B8F] px-4 pb-4 flex flex-col gap-3'>
+                            <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Leggings <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
+                            </svg></span>
+                            </h1>
+                            <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Women’s Clothing <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
+                            </svg></span>
+                            </h1>
+                            <h1 className='text-white  text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Men’s Clothing <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
+                            </svg></span>
+                            </h1>
+                            <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Yoga & Pilates Equipment <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
+                            </svg></span>
+                            </h1>
+                            <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Jewelry & Wellness <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
+                            </svg></span>
+                            </h1>
+                            <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Accessories <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6067 0.000110626L11.785 1.17844L5.89333 7.07178L0 1.17844L1.17833 0.000110626L5.8925 4.71428L10.6067 0.000110626Z" fill="white" />
+                            </svg></span>
+                            </h1>
+                            <h1 className='text-white text-[16px] flex flex-row items-center gap-2 cursor-pointer py-2 hover:opacity-80 transition'>Size Guide </h1>
                         </div>
                     )}
                 </div>
@@ -80,4 +116,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Addtocartnavbar

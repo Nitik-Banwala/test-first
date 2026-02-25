@@ -4,9 +4,9 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <div className="bg-[#414143] w-full">
-            <div className="bg-[#414143] flex flex-col justify-center items-center mx-auto px-4 sm:px-6 md:px-8">
-                <div className="flex flex-col md:flex-row justify-between gap-8 sm:gap-12 md:gap-20 lg:gap-83.25 mt-12 sm:mt-16 md:mt-22.5 mb-12 sm:mb-16 md:mb-21.75 w-full">
+        <div className="bg-[#414143] w-full ">
+            <div className="bg-[#414143] flex flex-col justify-center items-center lg:max-w-360 mx-auto lg:mx-auto px-4 sm:px-6 md:px-8">
+                <div className="flex flex-col md:flex-row justify-between gap-8 sm:gap-12 md:gap-20 lg:gap-83.25 mt-12 sm:mt-16 md:mt-22.5 mb-12 sm:mb-16 md:mb-21.75 max-w-285">
                     <div className="w-full md:w-auto">
                         <h1 className="max-w-81.5 text-white font-normal text-base sm:text-lg md:text-xl leading-[165%]">
                             Eco-friendly yoga mats that blend-high performance.

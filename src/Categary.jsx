@@ -49,9 +49,9 @@ const Categary = () => {
         },
         {
             id: 7,
-            name: '/Categories7.png',
+            name: '/ccccc.png',
             price: '€14.95',
-            image: '/7.png',
+            image: '/categories7.png',
             dics: 'Soft Yoga Cushion'
         }, {
             id: 8,
@@ -94,7 +94,7 @@ const Categary = () => {
     ];
     return (
 
-        <div>
+        <div className="max-[640px]:flex max-[640px]:flex-col">
             <div className='max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-285 mx-auto flex mt-10 sm:mt-20 md:mt-28 lg:mt-35 flex-col sm:flex-row justify-between gap-4 px-4 sm:px-6 md:px-8 lg:px-0'>
                 <div>
                     <h1 className='font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>Shop Our Categories</h1>
@@ -102,14 +102,14 @@ const Categary = () => {
                 </div>
                 <button className='w-full sm:w-auto px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-3 lg:h-14.25 border-0 bg-[#01C6B5] text-white font-medium hover:bg-[#00a896] transition-colors whitespace-nowrap'>View All </button>
             </div>
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mt-6 sm:mt-8 md:mt-10 max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-285 mx-auto px-4 sm:px-6 md:px-8 lg:px-0'>
+            <div className='grid grid-cols-1 max-w-360 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mt-6 sm:mt-8 md:mt-10  sm:max-w-2xl md:max-w-3xl lg:max-w-285 mx-auto px-4  sm:px-6 md:px-8 lg:px-0'>
                 {carddata.map((cards) => (
                     <div key={cards.id}
-                        className='w-full aspect-square sm:aspect-auto shadow-sm hover:bg-[#0000004D] hover:scale-[1.04] transition-transform duration-200 flex flex-col'
+                        className=' max-w-66.75 aspect-square sm:aspect-auto shadow-sm z-10 hover:bg-[#0000004D] hover:scale-[1.04] transition-transform duration-200 flex flex-col'
                      >
                         <div className='relative w-full h-1/3'>
-                            {cards.sale && <div className='absolute top-2 left-2 sm:top-3 sm:left-3'><h1 className='text-white text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-1.5 bg-[#01C6B5] flex justify-center items-center rounded'>{cards.sale}</h1></div>}
-                            <div className='absolute top-2 right-2 sm:top-3 sm:right-3 w-7 h-7 sm:w-8.75 sm:h-8.75 rounded-[50%] bg-[#FFFFFF] flex justify-center items-center cursor-pointer hover:bg-gray-100 transition-colors' onClick={() => toggleLike(cards.id)}>
+                            {cards.sale && <div className='absolute z-10 top-2 left-2 sm:top-3 sm:left-3'><h1 className='text-white text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-1.5 bg-[#01C6B5] flex justify-center items-center rounded'>{cards.sale}</h1></div>}
+                            <div className='absolute z-10 top-2 right-2 sm:top-3 sm:right-3 w-7 h-7 sm:w-8.75 sm:h-8.75 rounded-[50%] bg-[#FFFFFF] flex justify-center items-center cursor-pointer hover:bg-gray-100 transition-colors'>
                                 <svg
                                     width="18"
                                     height="16"
@@ -128,15 +128,15 @@ const Categary = () => {
                                 </svg>
                             </div>
                         </div>
-                        <div className='w-full h-1/2 flex justify-center items-center bg-[#EFEFEF] relative group'>
-                            <img src={cards.image} alt={cards.dics} className='w-3/4 h-3/4 object-contain hover:scale-[1.1] transition-transform duration-200'/>
+                        <div className=' max-w-66.75 max-h-62.75 flex justify-center items-center bg-[#0000000D] relative group'>
+                            <img src={cards.image} alt={cards.dics} className=' object-contain  h-61 w-full  bg-[#0000000D] '/>
                             <div className='hidden group-hover:flex justify-center items-center absolute inset-0'>
                                 <button className='cursor-pointer active:bg-[#007a70] bg-[#01C6B5] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg font-medium text-white rounded hover:bg-[#00a896] transition-colors'>Add to cart</button>
                             </div>
                         </div>
-                        <div className='flex flex-col w-full h-1/6 px-3 py-2 gap-1'>
+                        <div className='flex flex-row w-full h-1/6 px-3 py-2  max-w-66.75 justify-between'>
                             <h1 className='text-sm sm:text-base font-medium line-clamp-1'>{cards.dics}</h1>
-                            <p className='text-sm sm:text-base font-semibold text-[#01C6B5]'>{cards.price}</p>
+                            <p className='text-sm sm:text-base font-semibold '>{cards.price}</p>
                         </div>
                     </div>
                 ))}

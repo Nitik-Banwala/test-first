@@ -13,7 +13,7 @@ const Trending = () => {
         price: '€42.00',
         des1: 'Sculpting, slimming, supportive, stretchy, ',
         des2: 'stylish, seamless',
-        image: '/Trending1.png'
+        image: '/img9.png'
     },
     {
         id: 2,
@@ -21,14 +21,14 @@ const Trending = () => {
         price: '€50.00',
         des1: 'Sculpting, slimming, supportive, stretchy,  ',
         des2: 'stylish, seamless',
-        image: '/Trending2.png'
+        image: '/img10.png'
     }, {
         id: 3,
         heading: 'Sleeveless Sports Jacket ',
         price: '€33.00',
         des1: 'Sculpting, slimming, supportive, stretchy, ',
         des2: 'stylish, seamless',
-        image: '/Trending3.png'
+        image: '/img11.png'
     },
     ]
     return (
@@ -43,11 +43,11 @@ const Trending = () => {
                 {Trendingcards.map((cardss) => (
                     <div key={cardss.id} className='group'>
                         <div className='relative p-4 sm:p-5 shadow-lg bg-white h-full flex flex-col'>
-                            <div className='absolute top-3 sm:top-4 right-3 sm:right-4 z-10'>
+                            <div className='absolute flex right-9.75 top-10 z-10'>
                                 <LikeButton />
                             </div>
 
-                            <img src={cardss.image} alt={cardss.heading} className='w-full h-auto object-cover rounded' />
+                            <img src={cardss.image} alt={cardss.heading} className='lg:max-w-83 max-h-68.75  object-cover rounded' />
                             <div className='flex-1 flex flex-col'>
                                 <h1 className='font-medium text-lg sm:text-xl md:text-2xl mt-3 sm:mt-4 leading-snug'>{cardss.heading}</h1>
                                 <p className='text-sm sm:text-base font-normal mt-2 text-gray-700'>{cardss.des1}</p>
