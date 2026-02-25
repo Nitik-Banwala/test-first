@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import Addtocartnavbar from './Addtocartnavbar';
 import { Link } from 'react-router-dom';
+import { CartContext } from './CartContext';
 
 const Addtocart = () => {
     const [cartItems, setCartItems] = useState([]);
     const [quantities, setQuantities] = useState({});
+    const { removeFromCart } = useContext(CartContext);
 
     useEffect(() => {
         const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -38,9 +40,9 @@ const Addtocart = () => {
     };
 
     const handleDeleteItem = (index) => {
+        removeFromCart(index);
         const updatedItems = cartItems.filter((_, i) => i !== index);
         setCartItems(updatedItems);
-        localStorage.setItem("cart", JSON.stringify(updatedItems));
     
         const updatedQuantities = { ...quantities };
         delete updatedQuantities[index];
@@ -74,7 +76,7 @@ const Addtocart = () => {
                 {cartItems.length === 0 ? (
                     <p>Your cart is empty </p>
                 ) : (
-                    <div>
+                    <div className='z-10'>
                         <div className='hidden md:flex flex-row bg-[#4141431A] p-4 justify-between'>
                             <h1 className='flex text-left'>Product</h1>
                             <h1 className='flex text-center'>Quantity</h1>

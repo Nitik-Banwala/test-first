@@ -12,6 +12,7 @@ import Newsletter from './Newsletter'
 import Footer from './Footer'
 import Addtocart from './Addtocart'
 import Service from './Service'
+import { CartProvider } from './CartContext'
 
 const Home = () => (
   <>
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  return <RouterProvider router={router} />
+  return <CartProvider><RouterProvider router={router} /></CartProvider>
 }
 
 export default App

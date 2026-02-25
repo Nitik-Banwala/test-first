@@ -1,17 +1,15 @@
 import LikeButton from './Likebutton';
+import { useContext } from 'react';
+import { CartContext } from './CartContext';
 
 const Products = () => {
+    const { addToCart } = useContext(CartContext);
 
     const productsData = [
         { id: 1, name: 'Round Yoga Mat', price: '14.95', image: '/Products1.png' },
         { id: 2, name: 'Non-Slip Travel Yoga Mat', price: '14.95', image: '/Products2.png' },
         { id: 3, name: 'Foldable Yoga Mat', price: '31.95', image: '/Products3.png' }
     ];
-    const addToCart = (product) => {
-        const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-        const updatedCart = [...existingCart, product];
-        localStorage.setItem("cart", JSON.stringify(updatedCart));
-    };
 
     return (
         <div className="max-[640px]:flex max-[640px]:flex-col">
