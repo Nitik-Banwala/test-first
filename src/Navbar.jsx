@@ -13,8 +13,8 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className='z-30'>
-                <div className=' w-full bg-white px-4'>
+            <div className='z-30 '>
+                <div className=' w-full fixed z-30 bg-white px-4'>
                     <div className='max-w-285 mx-auto flex my-2.5  justify-between '>
                         <div className='flex flex-row items-center gap-3'>
                             <svg width="45" height="17" viewBox="0 0 45 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +25,7 @@ const Navbar = () => {
                                 <path d="M26.9714 12.7244C26.4034 12.7244 25.8914 12.5964 25.4354 12.3404C24.9794 12.0764 24.6194 11.7204 24.3554 11.2724C24.0914 10.8244 23.9594 10.3164 23.9594 9.74837C23.9594 9.18837 24.0874 8.68437 24.3434 8.23637C24.6074 7.78837 24.9594 7.43637 25.3994 7.18037C25.8474 6.91637 26.3474 6.78437 26.8994 6.78437C27.4274 6.78437 27.8914 6.90437 28.2914 7.14437C28.6994 7.38437 29.0154 7.71637 29.2394 8.14037C29.4714 8.56437 29.5874 9.04437 29.5874 9.58037C29.5874 9.66037 29.5834 9.74837 29.5754 9.84437C29.5674 9.93237 29.5514 10.0364 29.5274 10.1564H24.7154V9.25637H28.9514L28.5554 9.60437C28.5554 9.22037 28.4874 8.89637 28.3514 8.63237C28.2154 8.36037 28.0234 8.15237 27.7754 8.00837C27.5274 7.85637 27.2274 7.78037 26.8754 7.78037C26.5074 7.78037 26.1834 7.86037 25.9034 8.02037C25.6234 8.18037 25.4074 8.40437 25.2554 8.69237C25.1034 8.98037 25.0274 9.32037 25.0274 9.71237C25.0274 10.1124 25.1074 10.4644 25.2674 10.7684C25.4274 11.0644 25.6554 11.2964 25.9514 11.4644C26.2474 11.6244 26.5874 11.7044 26.9714 11.7044C27.2914 11.7044 27.5834 11.6484 27.8474 11.5364C28.1194 11.4244 28.3514 11.2564 28.5434 11.0324L29.2394 11.7404C28.9674 12.0604 28.6314 12.3044 28.2314 12.4724C27.8394 12.6404 27.4194 12.7244 26.9714 12.7244Z" fill="white" />
                                 <circle cx="36.0396" cy="8.50006" r="2.45172" fill="white" />
                             </svg>
-                            <h1 className='text-[12px] sm:text-[20px]'>Free delivery & free returns within 15 days</h1>
+                            <h1 className='text-[12px] sm:text-[16px] font-normal '>Free delivery & free returns within 15 days</h1>
                         </div>
                         <div className=' hidden sm:flex flex-row gap-2.25'>
                             <div className='border border-[#01C6B5] cursor-pointer rounded-[50%] w-7.5 h-7.5 items-center justify-center flex'>
@@ -51,7 +51,7 @@ const Navbar = () => {
                                     </Link>
                                 </div>
                                 {cartCount > 0 && (
-                                    <span className='absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center'>
+                                    <span className='absolute -top-1 right-0 bg-[#01C6B5] text-white text-[6px] font-bold rounded-full w-2 h-2 flex items-center justify-center'>
                                         {cartCount}
                                     </span>
                                 )}
@@ -59,12 +59,16 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-full bg-[#01C6B5] h-auto  md:h-17.5'>
-                    <div className='max-w-285 mx-auto flex flex-row justify-between items-center h-auto sm:h-17.5 px-4 py-2 sm:py-0 z-30 '>
+                <div className='w-full fixed  sm:mt-12 mt-9 z-30 bg-[#01C6B5] h-auto  md:h-17.5'>
+                    <div className='max-w-285  mx-auto flex flex-row justify-between items-center h-auto sm:h-17.5 px-4 py-2 sm:py-0 z-30 '>
                         <h1 className='text-white cursor-pointer shrink-0'><img src="/logo.png" alt="Logo" className='h-8 sm:h-auto' /></h1>
                         <div className='hidden md:flex flex-row gap-9 text-white'>
-                            <h1 className='cursor-pointer hover:opacity-80 transition'>Home</h1>
-                            <h1 className='cursor-pointer hover:opacity-80 transition'>Contact</h1>
+                            <Link to={"/"}>
+                                <h1 className='cursor-pointer hover:opacity-80 transition'>Home</h1>
+                            </Link>
+                            <Link to={"/"}>
+                                <h1 className='cursor-pointer hover:opacity-80 transition'>Contact</h1>
+                            </Link>
                             <Link to={"/addtocart"}>
                                 <h1 className='cursor-pointer hover:opacity-80 transition'>Cart</h1>
                             </Link>

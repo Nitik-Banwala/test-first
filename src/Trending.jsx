@@ -16,6 +16,7 @@ const Trending = () => {
         des2: 'stylish, seamless',
         image: '/img9.png'
     },
+
     {
         id: 2,
         heading: 'Horts and One-Strap Bra',
@@ -23,20 +24,22 @@ const Trending = () => {
         des1: 'Sculpting, slimming, supportive, stretchy,  ',
         des2: 'stylish, seamless',
         image: '/img10.png'
-    }, {
+    },
+    
+    {
         id: 3,
         heading: 'Sleeveless Sports Jacket',
         price: '€33.00',
         des1: 'Sculpting, slimming, supportive, stretchy, ',
         des2: 'stylish, seamless',
-        image: '/img11.png'
+        image: 'public/Trending3.png'
     },
     ]
     return (
         <div>
             <div className='mb-8 sm:mb-12.5 mt-35 p-4 flex flex-col max-w-285 mx-auto sm:flex-row sm:justify-between gap-4  sm:gap-0'>
                 <div className='flex flex-col sm:flex-none justify-center items-center sm:items-start'>
-                    <h1 className='text-2xl sm:text-3xl md:text-4xl  lg:text-5xl font-semibold'>Featured Products</h1>
+                    <h1 className='text-2xl sm:text-3xl md:text-4xl  lg:text-5xl font-semibold'>Trending Products</h1>
                     <p className='text-base sm:text-lg md:text-[20px] font-normal text-gray-600 mt-1 sm:mt-2'>Use this area to describe the collection.</p>
                 </div>
                 <div className='sm:flex hidden  flex-row gap-3.5 mt-6.25'>
@@ -51,7 +54,7 @@ const Trending = () => {
                                 <LikeButton />
                             </div>
 
-                            <img src={cardss.image} alt={cardss.heading} className='lg:max-w-83 max-h-68.75  object-cover rounded' />
+                            <img src={cardss.image} alt={cardss.heading} className='lg:max-w-83 max-h-68.75  object-cover ' />
                             <div className='flex-1 flex flex-col'>
                                 <h1 className='font-medium text-lg sm:text-xl md:text-2xl mt-3 sm:mt-4 leading-snug'>{cardss.heading}</h1>
                                 <p className='text-sm sm:text-base font-normal mt-2 text-gray-700'>{cardss.des1}</p>
@@ -66,7 +69,7 @@ const Trending = () => {
                                     </div>
                                 </div>
                             </div>
-                            <button className='w-full mt-4 sm:mt-5 px-4 py-2 sm:py-3 border-2 border-[#01C6B5] text-sm sm:text-base font-medium cursor-pointer hover:bg-[#01C6B5] active:bg-[#02988b] hover:text-white transition-all duration-200 rounded'>
+                            <button className='w-full mt-4 sm:mt-5 hover:text-white px-4 py-2 sm:py-3 border  text-sm sm:text-base font-medium cursor-pointer hover:bg-[#01C6B5]  '>
                                 Shop now
                             </button>
                         </div>

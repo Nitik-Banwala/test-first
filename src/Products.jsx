@@ -14,7 +14,7 @@ const Products = () => {
 
     return (
         <div className="max-[640px]:flex max-[640px]:flex-col">
-            <div className='max-w-285 h-full mx-auto mt-16 sm:mt-24 lg:mt-32.5 px-4 sm:px-6 lg:px-0 font-["Outfit",sans-serif]'>
+            <div className='max-w-285 h-full mx-auto mt-20 sm:mt-24 lg:mt-32.5 px-4 sm:px-6 lg:px-0 font-["Outfit",sans-serif]'>
                 <div className='mb-8 sm:mb-12.5 flex flex-col sm:flex-row sm:justify-between gap-4  sm:gap-0'>
                     <div>
                         <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold'>Featured Products</h1>
@@ -28,7 +28,7 @@ const Products = () => {
                 <div className='max-w-285 h-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6'>
                     {productsData.map((product) => (
                         <div key={product.id} className='group'>
-                            <div className='relative bg-[#F5F5F5] flex justify-center items-center max-w-91 max-h-110.25 aspect-square hover:bg-[#0000004D] hover:scale-[1.05] transition-transform duration-200 overflow-hidden'>
+                            <div className='relative bg-[#F5F5F5] flex justify-center items-center max-w-91 max-h-110.25 aspect-square hover:bg-[#0000004D]  transition-transform duration-200 overflow-hidden'>
 
                                 <div className='absolute top-0 left-0 right-0 p-3 sm:p-4 flex justify-between z-10'>
                                     <div className='bg-[#FFFFFF] px-3 sm:px-4 py-2 rounded-[88px]'>€{product.price}</div>
@@ -37,7 +37,7 @@ const Products = () => {
                                 <div className='absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-all duration-200 opacity-0 group-hover:opacity-100'>
                                     <button
                                         onClick={() => addToCart(product)}
-                                        className='cursor-pointer active:bg-[#007a70] bg-[#01C6B5] px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-white rounded hover:opacity-90 transition'
+                                        className='cursor-pointer active:bg-[#007a70] bg-[#01C6B5] px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-white hover:opacity-90 transition'
                                     >
                                         Add to cart
                                     </button>

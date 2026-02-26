@@ -51,44 +51,10 @@ const Footer = () => {
                             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-base leading-[100%]">
                                 Men’s Clothing
                             </p>
-                            <p
-                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-base leading-[100%]">
-                                Yoga & Pilates Equipment
-                            </p>
-                            <p
-                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-base leading-[100%]">
-                                Jewelry & Wellness
-                            </p>
-                            <p
-                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-base leading-[100%]">
-                                Accessories
-                            </p>
-                            <p
-                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-base leading-[100%]">
-                                Size Guide
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
-                            <h1
-                             className="text-[#FAFAFA]  font-medium text-base sm:text-lg md:text-xl leading-[100%]">
-                                Other links
-                            </h1>
-                            <p
-                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-sm sm:text-base leading-[100%] hover:text-[#01C6B5] cursor-pointer transition">
-                                Privacy Policy
-                            </p>
-                            <p
-                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-sm sm:text-base leading-[100%] hover:text-[#01C6B5] cursor-pointer transition">
-                                Terms of Service
-                            </p>
-                            <p
-                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}  className="text-[#FAFAFA] cursor-pointer font-normal text-sm sm:text-base leading-[100%] hover:text-[#01C6B5] cursor-pointer transition">
-                                Terms of Service
-                            </p>
                         </div>
                     </div>
                 </div>
-                <div className="py-4 sm:py-5.25 w-full text-center border-t border-[#555555]">
+                <div className="py-4 sm:py-5.25 w-full text-center gradient-border-top ">
                     <h1 className="text-[#FAFAFA] font-normal text-xs sm:text-sm md:text-base leading-[100%]">
                         Copyright © 2026 Yogalis. All Rights Reserved
                     </h1>

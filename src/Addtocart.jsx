@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import Addtocartnavbar from './Addtocartnavbar';
+import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext';
 
@@ -60,15 +60,15 @@ const Addtocart = () => {
 
     return (
         <div>
-            <Addtocartnavbar />
+            <Navbar />
 
-                    <div className='max-w-285 mx-auto p-4'>
-                    <div className='max-w-285 mx-auto flex flex-col sm:flex-row justify-between p-4 items-start sm:items-center gap-4'>
+                    <div className='max-w-285  mx-auto p-4'>
+                    <div className='max-w-285 mt-29 mx-auto flex flex-col sm:flex-row justify-between p-4 items-start sm:items-center gap-4'>
                         <h1 className='font-bold text-3xl sm:text-5xl'>Your cart</h1>
                         <Link to={"/"}>
-                            <div className='text-base sm:text-2xl font-bold text-[#414143] cursor-pointer'>
+                        <div className='text-base sm:text-2xl font-medium text-[#6b6b6b] underline cursor-pointer'>
                                 Continue Shopping
-                                <div className='mt-2 w-36 sm:w-52 h-1 bg-[#414143]'></div>
+                               
                             </div>
                         </Link>
                     </div>
@@ -77,7 +77,7 @@ const Addtocart = () => {
                     <p>Your cart is empty </p>
                 ) : (
                     <div className='z-10'>
-                        <div className='hidden md:flex flex-row bg-[#4141431A] p-4 justify-between'>
+                            <div className='hidden md:flex flex-row bg-[#4141431A] border-b border-[#4141431A] p-4 justify-between'>
                             <h1 className='flex text-left'>Product</h1>
                             <h1 className='flex text-center'>Quantity</h1>
                             <h1 className='flex text-right'>Total</h1>
@@ -86,14 +86,14 @@ const Addtocart = () => {
                         {cartItems.map((item, index) => (
                             <div key={index} className='flex flex-col md:flex-row justify-between items-start md:items-center border-b border-[#4141431A] p-4 gap-4'>
                                 <div className='flex-1 flex items-start md:items-center gap-4'>
-                                    <img src={item.image} alt={item.name} className='w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover' />
+                                    <img src={item.image} alt={item.name} className='w-20 h-20 bg-[#ebeaea] sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover' />
                                     <div className='flex flex-col'>
                                         <span className='font-medium'>{item.name}</span>
                                         <span className='text-sm text-gray-600'>€{item.price}</span>
                                     </div>
                                 </div>
 
-                                <div className='flex items-center md:flex-none border  overflow-hidden'>
+                                <div className='flex items-center md:flex-none border border-[#4141431A]  overflow-hidden'>
                                     <button
                                         className='bg-[#414143] cursor-pointer px-4 py-2 flex justify-center items-center text-white hover:opacity-80'
                                         onClick={() => handleDecreaseQuantity(index)}
