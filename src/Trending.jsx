@@ -1,5 +1,6 @@
 import React from 'react'
 import LikeButton from './Likebutton'
+import Navbutton from './Navbutton';
 
 const Star = () => (
     <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +25,7 @@ const Trending = () => {
         image: '/img10.png'
     }, {
         id: 3,
-        heading: 'Sleeveless Sports Jacket ',
+        heading: 'Sleeveless Sports Jacket',
         price: '€33.00',
         des1: 'Sculpting, slimming, supportive, stretchy, ',
         des2: 'stylish, seamless',
@@ -33,10 +34,13 @@ const Trending = () => {
     ]
     return (
         <div>
-            <div className='max-w-285 mx-auto mt-16 sm:mt-24 lg:mt-35 px-4 sm:px-6 lg:px-0'>
-                <div className='lg:flex-none flex-col flex justify-center items-center lg:items-start px-4'>
-                    <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold '>Trending Product's</h1>
-                    <p className='text-base sm:text-lg md:text-[20px] font-normal text-[#414143] mt-1 sm:mt-2'>Use this area to describe the collection.</p>
+            <div className='mb-8 sm:mb-12.5 mt-35 p-4 flex flex-col max-w-285 mx-auto sm:flex-row sm:justify-between gap-4  sm:gap-0'>
+                <div className='flex flex-col sm:flex-none justify-center items-center sm:items-start'>
+                    <h1 className='text-2xl sm:text-3xl md:text-4xl  lg:text-5xl font-semibold'>Featured Products</h1>
+                    <p className='text-base sm:text-lg md:text-[20px] font-normal text-gray-600 mt-1 sm:mt-2'>Use this area to describe the collection.</p>
+                </div>
+                <div className='sm:flex hidden  flex-row gap-3.5 mt-6.25'>
+                    <Navbutton />
                 </div>
             </div>
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-285 mx-auto mt-8 sm:mt-10 gap-4 sm:gap-6 px-4 sm:px-6 lg:px-0'>

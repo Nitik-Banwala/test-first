@@ -1,6 +1,7 @@
 import LikeButton from './Likebutton';
 import { useContext } from 'react';
 import { CartContext } from './CartContext';
+import Navbutton from './Navbutton';
 
 const Products = () => {
     const { addToCart } = useContext(CartContext);
@@ -14,12 +15,14 @@ const Products = () => {
     return (
         <div className="max-[640px]:flex max-[640px]:flex-col">
             <div className='max-w-285 h-full mx-auto mt-16 sm:mt-24 lg:mt-32.5 px-4 sm:px-6 lg:px-0 font-["Outfit",sans-serif]'>
-                <div className='mb-8 sm:mb-12.5 flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0'>
+                <div className='mb-8 sm:mb-12.5 flex flex-col sm:flex-row sm:justify-between gap-4  sm:gap-0'>
                     <div>
                         <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold'>Featured Products</h1>
                         <p className='text-base sm:text-lg md:text-[20px] font-normal text-gray-600 mt-1 sm:mt-2'>Use this area to describe the collection.</p>
                     </div>
-                    <div className='flex flex-row gap-3.5 mt-6.25'></div>
+                    <div className=' sm:flex flex-row hidden  gap-3.5 mt-6.25'>
+                        <Navbutton/>
+                    </div>
                 </div>
 
                 <div className='max-w-285 h-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6'>
