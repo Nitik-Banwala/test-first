@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Slides } from '../utils/Data'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
 
- 
 
     useEffect(() => {
         const interval = setInterval(() => {

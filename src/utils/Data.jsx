@@ -129,6 +129,18 @@ export const ProductsData = [
         name: 'Foldable Yoga Mat',
         price: '31.95',
         image: '/Products3.png'
+    },
+    {
+        id: 4,
+        name: 'Round Yoga Mat',
+        price: '14.95',
+        image: '/Products1.png'
+    },
+    {
+        id: 5,
+        name: 'Non-Slip Travel Yoga Mat',
+        price: '14.95',
+        image: '/Products2.png'
     }
 ];
 export const Slides = [

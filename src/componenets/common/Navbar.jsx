@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
 
             <div className='w-full fixed sm:mt-12 mt-11 z-30 bg-[#01C6B5] h-auto md:h-17.5'>
-                <div className='max-w-285 mx-auto flex flex-row justify-between items-center h-auto sm:h-17.5 px-4 py-2 sm:py-0 z-30'>
+                <div className='max-w-285 mx-auto flex flex-row justify-between items-center h-auto sm:h-17.5 max-[1174px]:px-4 py-2 min-[1175px]:py-0 z-30'>
                     <Link to={"/"}>
                         <img src="/logo.png" alt="Logo" className='h-8 sm:h-auto cursor-pointer' />
                     </Link>

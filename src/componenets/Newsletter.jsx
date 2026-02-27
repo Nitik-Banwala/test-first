@@ -15,16 +15,19 @@ const Newsletter = () => {
                         Get weekly updates on the newest design stories, case studies and tips right in your mailbox.
                     </p>
                     
-                    <div className='border border-[#4141431A]  w-full max-w-72  sm:max-w-md md:max-w-lg justify-between flex flex-col sm:flex-row gap-2 sm:gap-0'>
+                    <div className='border border-[#4141431A]  w-full max-w-72  sm:h-16.25 sm:max-w-md md:max-w-lg justify-between flex flex-col p-0.75  sm:flex-row gap-2 sm:gap-0'>
                         <input 
                             type="email" 
                             placeholder='Email Address' 
                             className='ml-0 sm:ml-4 px-3 sm:px-0 py-2 sm:py-0 text-sm sm:text-base outline-none flex-1' 
                         />
-                        <button className='w-full sm:w-35 h-12 sm:h-14.25 bg-[#01C6B5] text-white text-sm sm:text-base font-medium hover:opacity-90 transition'>
+                        <button className='w-full sm:w-35 h-12 sm:h-14.25 justify-center items-center  hidden sm:flex bg-[#01C6B5] text-white text-sm sm:text-base font-medium hover:opacity-90 transition'>
                             Subscribe
                         </button>
                     </div>
+                    <button className='max-w-72 w-full mt-1 flex sm:hidden justify-center items-center  h-12 sm:h-14.25 bg-[#01C6B5] text-white text-sm sm:text-base font-medium hover:opacity-90 transition'>
+                        Subscribe
+                    </button>
                 </div>
                 <div className='hidden lg:flex items-center justify-center shrink-0'>
                     <img src="/Newsletter2.png" alt="Newsletter decoration right" className='w-full  ' />

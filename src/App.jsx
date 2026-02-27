@@ -4,9 +4,10 @@ import Leanding from './Leanding'
 import Addtocart from './componenets/Addtocart'
 import { CartProvider } from './componenets/CartContext'
 
+
 const Home = () => (
   <>
-<Leanding/>
+    <Leanding />
   </>
 )
 
@@ -18,14 +19,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Home/>
+    element: <Home />
   },
-
-
 ])
 
+
+
+
 function App() {
-  return <CartProvider><RouterProvider router={router} /></CartProvider>
+  return (
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
+  )
 }
 
 export default App
