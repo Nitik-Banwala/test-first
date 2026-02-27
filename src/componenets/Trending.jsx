@@ -1,6 +1,6 @@
 import React from 'react'
-import LikeButton from './Likebutton'
-import Navbutton from './Navbutton';
+import LikeButton from './common/Likebutton'
+import Navbutton from './common/Navbutton';
 
 const Star = () => (
     <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +11,7 @@ const Trending = () => {
     const Trendingcards = [{
         id: 1,
         heading: 'Ultra Shaping Leggings',
-        price: '€42.00',
+        price: '42.00',
         des1: 'Sculpting, slimming, supportive, stretchy, ',
         des2: 'stylish, seamless',
         image: '/img9.png'
@@ -20,7 +20,7 @@ const Trending = () => {
     {
         id: 2,
         heading: 'Horts and One-Strap Bra',
-        price: '€50.00',
+        price: '50.00',
         des1: 'Sculpting, slimming, supportive, stretchy,  ',
         des2: 'stylish, seamless',
         image: '/img10.png'
@@ -29,10 +29,10 @@ const Trending = () => {
     {
         id: 3,
         heading: 'Sleeveless Sports Jacket',
-        price: '€33.00',
+        price: '33.00',
         des1: 'Sculpting, slimming, supportive, stretchy, ',
         des2: 'stylish, seamless',
-        image: 'public/Trending3.png'
+        image: '/tranding3.png'
     },
     ]
     return (
@@ -49,18 +49,17 @@ const Trending = () => {
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-285 mx-auto mt-8 sm:mt-10 gap-4 sm:gap-6 px-4 sm:px-6 lg:px-0'>
                 {Trendingcards.map((cardss) => (
                     <div key={cardss.id} className='group'>
-                        <div className='relative p-4 sm:p-5 shadow-lg bg-white h-full flex flex-col'>
+                        <div className='relative p-4 sm:p-5 border border-[#0000000D]  hover:shadow-lg bg-white h-full flex flex-col'>
                             <div className='absolute flex right-9.75 top-10 z-10'>
                                 <LikeButton />
                             </div>
-
                             <img src={cardss.image} alt={cardss.heading} className='lg:max-w-83 max-h-68.75  object-cover ' />
                             <div className='flex-1 flex flex-col'>
-                                <h1 className='font-medium text-lg sm:text-xl md:text-2xl mt-3 sm:mt-4 leading-snug'>{cardss.heading}</h1>
+                                <h1 className='font-medium text-lg sm:text-xl md:text-2xl mt-5 sm:mt-4 leading-snug'>{cardss.heading}</h1>
                                 <p className='text-sm sm:text-base font-normal mt-2 text-gray-700'>{cardss.des1}</p>
                                 <p className='text-sm sm:text-base font-normal text-gray-700'>{cardss.des2}</p>
-                                <div className='flex justify-between items-center mt-3 sm:mt-4'>
-                                    <p className='font-bold text-xl sm:text-2xl'>{cardss.price}</p>
+                                <div className='flex justify-between items-center mt-2.5 sm:mt-4'>
+                                    <p className='font-bold text-xl sm:text-2xl'>€{cardss.price}</p>
                                     <div className='flex gap-1 sm:gap-1.5'>
                                         <Star />
                                         <Star />
@@ -69,8 +68,8 @@ const Trending = () => {
                                     </div>
                                 </div>
                             </div>
-                            <button className='w-full mt-4 sm:mt-5 hover:text-white px-4 py-2 sm:py-3 border  text-sm sm:text-base font-medium cursor-pointer hover:bg-[#01C6B5]  '>
-                                Shop now
+                            <button className='w-full mt-5 sm:mt-5 hover:text-white px-4 py-2 sm:py-3 border text-sm sm:text-base font-medium cursor-pointer hover:bg-[#01C6B5]  '>
+                                Shop Now
                             </button>
                         </div>
                     </div>

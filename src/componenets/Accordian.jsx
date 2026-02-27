@@ -32,10 +32,10 @@ const Accordion =()=> {
 
     return (
         <div className="max-w-full sm:max-w-2xl md:max-w-212 mx-auto mt-10 sm:mt-20 md:mt-35 px-4 sm:px-6 md:px-0">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-2 sm:mb-3">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-2 ">
                 Frequently Asked Questions
             </h1>
-            <p className="text-center text-gray-500 mb-6 sm:mb-8 text-sm sm:text-base">
+            <p className="text-center text-gray-500 mb-12.5 text-sm sm:text-base">
                 Real Questions. Expert Answers. Total Confidence.
             </p>
             <div className="space-y-3 sm:space-y-4">
@@ -45,12 +45,12 @@ const Accordion =()=> {
                     return (
                         <div
                             key={index}
-                            className={`border rounded-lg transition-all duration-300 ${isOpen ? "border-teal-400 shadow-sm" : "border-gray-300"
+                            className={`border py- transition-all duration-300 ${isOpen ? "border-teal-400 shadow-sm" : "border-gray-300"
                                 }`}
                         >
                             <button
                                 onClick={() => toggleAccordion(index)}
-                                className="w-full flex justify-between items-center p-3 sm:p-4 md:p-5 text-left hover:bg-gray-50 transition-colors"
+                                className="w-full flex justify-between items-center py-5 px-8.75 text-left hover:bg-gray-50 transition-colors"
                             >
                                 <span className="font-semibold text-sm sm:text-base md:text-lg pr-4">{item.title}</span>
                                 <svg

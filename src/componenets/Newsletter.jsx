@@ -2,10 +2,10 @@ import React from 'react'
 
 const Newsletter = () => {
     return (
-        <div className='bg-[#F1F1F1] mt-20 sm:mt-35 w-full'>
-            <div className='max-w-343 mx-auto flex flex-col lg:flex-row justify-between gap-6 sm:gap-8 lg:gap-0 px-4 sm:px-6 lg:px-0 py-8 sm:py-12 lg:py-16'>
+        <div className='bg-[#F1F1F1] mt-20 sm:mt-35 px-4 w-full'>
+            <div className='max-w-343 mx-auto flex flex-col lg:flex-row justify-between gap-6 sm:gap-8 lg:gap-0 px-4 '>
                 <div className='hidden lg:flex items-center justify-center shrink-0'>
-                    <img src="/Newsletter1.png" alt="Newsletter decoration left" className='w-full max-w-48 h-auto' />
+                    <img src="/Newsletter1.png" alt="Newsletter decoration left" className='w-full max-w-93 h-113.75' />
                 </div>
                 <div className='flex flex-col justify-center text-center items-center w-full'>
                     <h1 className='font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight'>
@@ -15,7 +15,7 @@ const Newsletter = () => {
                         Get weekly updates on the newest design stories, case studies and tips right in your mailbox.
                     </p>
                     
-                    <div className='border border-[#4141431A] p-1.5 w-full max-w-72  sm:max-w-md md:max-w-lg justify-between flex flex-col sm:flex-row gap-2 sm:gap-0'>
+                    <div className='border border-[#4141431A]  w-full max-w-72  sm:max-w-md md:max-w-lg justify-between flex flex-col sm:flex-row gap-2 sm:gap-0'>
                         <input 
                             type="email" 
                             placeholder='Email Address' 
@@ -27,7 +27,7 @@ const Newsletter = () => {
                     </div>
                 </div>
                 <div className='hidden lg:flex items-center justify-center shrink-0'>
-                    <img src="/Newsletter2.png" alt="Newsletter decoration right" className='w-full max-w-48 h-auto' />
+                    <img src="/Newsletter2.png" alt="Newsletter decoration right" className='w-full  ' />
                 </div>
             </div>
         </div>

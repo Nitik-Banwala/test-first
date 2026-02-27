@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
-import Navbar from './Navbar';
+import Navbar from './common/Navbar';
 import { Link } from 'react-router-dom';
-import { CartContext } from './CartContext';
+import { CartContext } from '../componenets/CartContext';
 
 const Addtocart = () => {
     const [cartItems, setCartItems] = useState([]);

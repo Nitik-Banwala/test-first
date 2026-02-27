@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { CartContext } from './CartContext'
+import { CartContext } from '../CartContext'
 
 
 const Navbar = () => {
@@ -61,7 +61,11 @@ const Navbar = () => {
                 </div>
                 <div className='w-full fixed  sm:mt-12 mt-9 z-30 bg-[#01C6B5] h-auto  md:h-17.5'>
                     <div className='max-w-285  mx-auto flex flex-row justify-between items-center h-auto sm:h-17.5 px-4 py-2 sm:py-0 z-30 '>
-                        <h1 className='text-white cursor-pointer shrink-0'><img src="/logo.png" alt="Logo" className='h-8 sm:h-auto' /></h1>
+                        <Link to={"/"}>
+                        <h1 className='text-white cursor-pointer shrink-0'>
+                           
+                                <img src="/logo.png" alt="Logo" className='h-8 sm:h-auto' /></h1>
+                    </Link>
                         <div className='hidden md:flex flex-row gap-9 text-white'>
                             <Link to={"/"}>
                                 <h1 className='cursor-pointer hover:opacity-80 transition'>Home</h1>
