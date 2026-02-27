@@ -3,7 +3,7 @@ import React from 'react'
 const Newsletter = () => {
     return (
         <div className='bg-[#F1F1F1] mt-20 sm:mt-35 px-4 w-full'>
-            <div className='max-w-343 mx-auto flex flex-col lg:flex-row justify-between gap-6 sm:gap-8 lg:gap-0 px-4 '>
+            <div className='max-w-343 mx-auto py-15 lg:py-0 flex flex-col lg:flex-row justify-between gap-6 sm:gap-8 lg:gap-0 px-4 '>
                 <div className='hidden lg:flex items-center justify-center shrink-0'>
                     <img src="/Newsletter1.png" alt="Newsletter decoration left" className='w-full max-w-93 h-113.75' />
                 </div>

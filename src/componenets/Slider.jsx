@@ -1,51 +1,23 @@
 import React, { useState, useEffect } from 'react'
+import { Slides } from '../utils/Data'
 
 const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
 
-    const slides = [
-        {
-            id: 1,
-            image: '/sliderone.png',
-            title: 'Nature - Inspired',
-            subtitle: 'ELEVATE YOUR PRATICE',
-            description: 'Eco-friendly yoga mats that blend-high performance with stunning, nature-inspired designs. Each product is thoughtfully crafted to elevate your yoga practice.'
-        },
-        {
-            id: 2,
-            image: '/slidertwo.png',
-            title: 'Nature - Inspired',
-            subtitle: 'ELEVATE YOUR PRATICE',
-            description: 'Eco-friendly yoga mats that blend-high performance with stunning, nature-inspired designs. Each product is thoughtfully crafted to elevate your yoga practice.'
-        },
-        {
-            id: 3,
-            image: '/sliderthree.png',
-            title: 'Nature - Inspired',
-            subtitle: 'ELEVATE YOUR PRATICE',
-            description: 'Eco-friendly yoga mats that blend-high performance with stunning, nature-inspired designs. Each product is thoughtfully crafted to elevate your yoga practice.'
-        },
-        {
-            id: 4,
-            image: '/sliderfour.png',
-            title: 'Nature - Inspired',
-            subtitle: 'ELEVATE YOUR PRATICE',
-            description: 'Eco-friendly yoga mats that blend-high performance with stunning, nature-inspired designs. Each product is thoughtfully crafted to elevate your yoga practice.'
-        }
-    ]
+ 
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % slides.length)
+            setCurrentSlide((prev) => (prev + 1) % Slides.length)
         }, 5000)
 
         return () => clearInterval(interval)
-    }, [slides.length])
+    }, [Slides.length])
     return (
         <div>
             <div className='slider relative w-full overflow-hidden'>
                 <div className='relative sm:mt-29 w-full h-screen'>
-                    {slides.map((slide, index) => (
+                    {Slides.map((slide, index) => (
                         <div
                             key={slide.id}
                             className={`slides z-10  h-screen bg-cover bg-center absolute w-full   transition-opacity duration-1000 ${

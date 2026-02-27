@@ -1,97 +1,6 @@
-
-
+import { Carddata } from "../utils/Data";
 const Categary = () => {
- 
-    const carddata = [
-        {
-            id: 1,
-            name: 'Insulated Sports Bottle',
-            price: '14.95',
-            image: '/1.png',
-            dics: 'Insulated Sports Bottle ',
-        },
-        {
-            id: 2,
-            name: 'Womens Long Wavy',
-            price: '14.95',
-            image: '/CATEGORIES2.png',
-            dics: 'Womens Long Wavy'
-        },
-        {
-            id: 3,
-            name: 'Acupressure Mat',
-            price: '14.95',
-            image: '/CATEGORIES3.png',
-            dics: 'Acupressure Mat'
-        },
-        {
-            id: 4,
-            name: 'Liberty Pattern Socks',
-            price: '14.95',
-            image: '/CATEGORIES4.png',
-            dics: 'Liberty Pattern Socks',
-            sale: 'sale'
-        },
-        {
-            id: 5,
-            name: 'Mat Bag with Pocket',
-            price: '14.95',
-            image: '/CATEGORIES5.png',
-            dics: 'Mat Bag with Pocket'
-        },
-        {
-            id: 6,
-            name: 'Tibetan Singing Bowls',
-            price: '14.95',
-            image: '/CATEGORIES6.png',
-            dics: 'Tibetan Singing Bowls',
-            sale: 'sale'
-        },
-        {
-            id: 7,
-            name: 'Soft Yoga Cushion',
-            price: '14.95',
-            image: '/categories7.png',
-            dics: 'Soft Yoga Cushion'
-        }, {
-            id: 8,
-            name: 'Cotton Yoga Pants',
-            price: '14.95',
-            image: '/CATEGORIES8.png',
-            dics: 'Cotton Yoga Pants',
-            sale: 'sale'
-        },
-        {
-            id: 9,
-            name: 'Womens Long Wavy',
-            price: '14.95',
-            image: '/CATEGORIES9.png',
-            dics: 'Womens Long Wavy',
-            sale: 'sale'
-        },
-        {
-            id: 10,
-            name: 'Travel Yoga Bag',
-            price: '14.95',
-            image: '/CATEGORIES10.png',
-            dics: 'Travel Yoga Bag'
-        },
-        {
-            id: 11,
-            name: 'Yoga Workout Shorts',
-            price: '14.95',
-            image: '/CATEGORIES11.png',
-            dics: 'Yoga Workout Shorts',
-            sale: 'sale'
-        },
-        {
-            id: 12,
-            name: 'Cork Yoga Mat',
-            price: '14.95',
-            image: '/CATEGORIES12.png',
-            dics: 'Cork Yoga Mat'
-        },
-    ];
+
     const addToCart = (cards) => {
         const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
         const updatedCart = [...existingCart, cards];
@@ -107,10 +16,10 @@ const Categary = () => {
                 </div>
                 <button className='w-full sm:w-auto px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-3 lg:h-14.25 border-0 bg-[#01C6B5] text-white font-medium hover:bg-[#00a896] transition-colors whitespace-nowrap'>View All </button>
             </div>
-            <div className='grid grid-cols-1 max-w-360 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mt-6 sm:mt-8 md:mt-12.5  sm:max-w-2xl md:max-w-3xl lg:max-w-285 mx-auto px-4  sm:px-6 md:px-8 lg:px-0'>
-                {carddata.map((cards) => (
+            <div className='grid grid-cols-1  max-w-360 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mt-6 sm:mt-8 md:mt-12.5  sm:max-w-2xl md:max-w-3xl lg:max-w-285 mx-auto px-4  sm:px-6 md:px-8 lg:px-0'>
+                {Carddata.map((cards) => (
                     <div key={cards.id}
-                        className=' max-w-66.75 aspect-square sm:aspect-auto shadow-sm z-10  transition-transform duration-200 flex flex-col'
+                        className=' max-w-66.75 max-h-75.75 shadow-sm z-10  transition-transform duration-200 flex flex-col'
                      >
                         <div className='relative w-full h-1/3'>
                             {cards.sale && <div className='absolute z-10 top-2 left-2 sm:top-3 sm:left-3'><h1 className='text-white text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-1.5 bg-[#01C6B5] flex justify-center items-center '>{cards.sale}</h1></div>}
@@ -124,7 +33,7 @@ const Categary = () => {
                         <div className=' hover:bg-[#0000004D] max-w-66.75 max-h-62.75 flex justify-center items-center bg-[#0000000D] relative group'>
                             <img src={cards.image} alt={cards.dics} className=' object-contain  h-61 w-full  bg-[#0000000D] '/>
                             <div className='hidden group-hover:flex justify-center items-center absolute inset-0'>
-                                <button onClick={() => addToCart(cards)} className='cursor-pointer active:bg-[#007a70] bg-[#01C6B5] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg font-medium text-white rounded hover:bg-[#00a896] transition-colors'>Add to cart</button>
+                                <button onClick={() => addToCart(cards)} className='cursor-pointer active:bg-[#007a70] bg-[#01C6B5] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg font-medium text-white hover:bg-[#00a896] transition-colors'>Add to cart</button>
                             </div>
                         </div>
                         <div className='flex flex-row w-full h-1/6 px-3 py-2  max-w-66.75 justify-between'>

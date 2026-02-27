@@ -10,6 +10,7 @@ import Accordion from './componenets/Accordian'
 import Newsletter from './componenets/Newsletter'
 import Footer from './componenets/Footer'
 
+
 const Leanding = () => {
   return (
       <div>

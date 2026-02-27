@@ -1,40 +1,13 @@
 import React from 'react'
 import LikeButton from './common/Likebutton'
 import Navbutton from './common/Navbutton';
+import { Trendingcards } from '../utils/Data';
+import { Staricn } from '../utils/Icons';
 
 const Star = () => (
-    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9.70465 14.8452L3.6993 18.4484L5.28471 11.6263L0 7.01424L6.96621 6.43772L9.70465 -1.52588e-05L12.4431 6.43772L19.4093 7.01424L14.1246 11.6263L15.71 18.4484L9.70465 14.8452Z" fill="#FFA800" />
-    </svg>
+<Staricn/>
 );
 const Trending = () => {
-    const Trendingcards = [{
-        id: 1,
-        heading: 'Ultra Shaping Leggings',
-        price: '42.00',
-        des1: 'Sculpting, slimming, supportive, stretchy, ',
-        des2: 'stylish, seamless',
-        image: '/img9.png'
-    },
-
-    {
-        id: 2,
-        heading: 'Horts and One-Strap Bra',
-        price: '50.00',
-        des1: 'Sculpting, slimming, supportive, stretchy,  ',
-        des2: 'stylish, seamless',
-        image: '/img10.png'
-    },
-    
-    {
-        id: 3,
-        heading: 'Sleeveless Sports Jacket',
-        price: '33.00',
-        des1: 'Sculpting, slimming, supportive, stretchy, ',
-        des2: 'stylish, seamless',
-        image: '/tranding3.png'
-    },
-    ]
     return (
         <div>
             <div className='mb-8 sm:mb-12.5 mt-35 p-4 flex flex-col max-w-285 mx-auto sm:flex-row sm:justify-between gap-4  sm:gap-0'>

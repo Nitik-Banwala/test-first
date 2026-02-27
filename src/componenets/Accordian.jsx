@@ -1,28 +1,5 @@
-import React, { useState } from "react";
-
-const faqData = [
-    {
-        title: "Our commitment to payment security",
-        content:
-            "All direct payment gateways adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, MasterCard, American Express, and Discover.",
-    },
-    {
-        title: "Our policy for returns and refunds",
-        content:
-            "All direct payment gateways adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, MasterCard, American Express, and Discover.",
-    },
-    {
-        title: "Product delivery times",
-        content:
-            "All direct payment gateways adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, MasterCard, American Express, and Discover.",
-    },
-    {
-        title: "Our warranty policy",
-        content:
-            "All direct payment gateways adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, MasterCard, American Express, and Discover.",
-    },
-];
-
+import React, { useState } from "react"
+import { FaqData } from "../utils/Data";
 const Accordion =()=> {
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -39,7 +16,7 @@ const Accordion =()=> {
                 Real Questions. Expert Answers. Total Confidence.
             </p>
             <div className="space-y-3 sm:space-y-4">
-                {faqData.map((item, index) => {
+                {FaqData.map((item, index) => {
                     const isOpen = activeIndex === index;
 
                     return (

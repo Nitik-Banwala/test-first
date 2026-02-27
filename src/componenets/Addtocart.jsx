@@ -11,73 +11,43 @@ const Addtocart = () => {
     useEffect(() => {
         const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
         setCartItems(storedCart);
-        
+
         const initialQuantities = {};
         storedCart.forEach((item, index) => {
             initialQuantities[index] = 1;
         });
         setQuantities(initialQuantities);
     }, []);
-    const extractPrice = (priceString) => {
-        const match = priceString.match(/[\d.]+/);
-        return match ? parseFloat(match[0]) : 0;
-    };
-    const handleIncreaseQuantity = (index) => {
-        setQuantities(prev => ({
-            ...prev,
-            [index]: (prev[index] || 1) + 1
-        }));
-    };
-    const handleDecreaseQuantity = (index) => {
-        setQuantities(prev => ({
-            ...prev,
-            [index]: Math.max(1, (prev[index] || 1) - 1)
-        }));
-    };
-    const calculateTotal = (price, quantity) => {
-        const numPrice = extractPrice(price);
-        return (numPrice * quantity).toFixed(2);
-    };
-
     const handleDeleteItem = (index) => {
         removeFromCart(index);
         const updatedItems = cartItems.filter((_, i) => i !== index);
         setCartItems(updatedItems);
-    
+
         const updatedQuantities = { ...quantities };
         delete updatedQuantities[index];
         setQuantities(updatedQuantities);
-    };
-
-    const calculateCartTotal = () => {
-        let total = 0;
-        cartItems.forEach((item, index) => {
-            const itemTotal = parseFloat(calculateTotal(item.price, quantities[index] || 1));
-            total += itemTotal;
-        });
-        return total.toFixed(2);
     };
 
     return (
         <div>
             <Navbar />
 
-                    <div className='max-w-285  mx-auto p-4'>
-                    <div className='max-w-285 mt-29 mx-auto flex flex-col sm:flex-row justify-between p-4 items-start sm:items-center gap-4'>
-                        <h1 className='font-bold text-3xl sm:text-5xl'>Your cart</h1>
-                        <Link to={"/"}>
-                        <div className='text-base sm:text-2xl font-medium text-[#6b6b6b] underline cursor-pointer'>
-                                Continue Shopping
-                               
-                            </div>
-                        </Link>
-                    </div>
+            <div className='max-w-285  mx-auto p-px px-3'>
+                <div className='max-w-285 mt-40 sm:mt-54  mx-auto   flex items-center justify-between '>
+                    <h1 className='font-bold text-3xl sm:text-5xl mb-10'>Your cart</h1>
+                    <Link to={"/"}>
+                        <div className='text-base sm:text-2xl font-medium -mt-8 text-[#6b6b6b] underline cursor-pointer'>
+                            Continue Shopping
+
+                        </div>
+                    </Link>
+                </div>
 
                 {cartItems.length === 0 ? (
                     <p>Your cart is empty </p>
                 ) : (
                     <div className='z-10'>
-                            <div className='hidden md:flex flex-row bg-[#4141431A] border-b border-[#4141431A] p-4 justify-between'>
+                        <div className='hidden md:flex flex-row bg-[#4141431A] border-b border-[#4141431A] p-4 justify-between'>
                             <h1 className='flex text-left'>Product</h1>
                             <h1 className='flex text-center'>Quantity</h1>
                             <h1 className='flex text-right'>Total</h1>
@@ -96,16 +66,16 @@ const Addtocart = () => {
                                 <div className='flex items-center md:flex-none border border-[#4141431A]  overflow-hidden'>
                                     <button
                                         className='bg-[#414143] cursor-pointer px-4 py-2 flex justify-center items-center text-white hover:opacity-80'
-                                        onClick={() => handleDecreaseQuantity(index)}
+                                        
                                     >
                                         -
                                     </button>
                                     <div className='px-4 py-2 flex justify-center items-center'>
-                                        {quantities[index] || 1}
+                                       1 
                                     </div>
                                     <button
                                         className='bg-[#01C6B5] cursor-pointer px-4 py-2 flex justify-center items-center text-white hover:opacity-80'
-                                        onClick={() => handleIncreaseQuantity(index)}
+                                        
                                     >
                                         +
                                     </button>
@@ -121,23 +91,23 @@ const Addtocart = () => {
                                     </button>
                                 </div>
                                 <div className='flex-1 text-left md:text-right mt-2 md:mt-0'>
-                                    €{calculateTotal(item.price, quantities[index] || 1)}
+                                    
                                 </div>
                             </div>
                         ))}
                         <div className='flex justify-center md:justify-end mt-8 p-4'>
                             <div className='flex flex-col gap-4 w-full max-w-xs md:w-80'>
                                 <div className='flex justify-between text-lg font-semibold'>
-                                        <span className='font-medium text-[16px]'>Estimated total </span>
-                                        <span className='font-semibold text-[16px]'>Dhs. {calculateCartTotal()} AED</span>
+                                    <span className='font-medium text-[16px]'>Estimated total </span>
+                                    <span className='font-semibold text-[16px]'>Dhs.  AED</span>
                                 </div>
-                                    <div className='font-normal text-[#414143] text-[14px]'>
-                                        <span>Taxes, discounts and shipping calculated at checkout. </span>
+                                <div className='font-normal text-[#414143] text-[14px]'>
+                                    <span>Taxes, discounts and shipping calculated at checkout. </span>
 
                                 </div>
-                                    <button className='bg-[#01C6B5] cursor-pointer text-white py-3 px-6  font-semibold hover:opacity-90 transition w-full md:w-auto'>
-                                        Checkout
-                                    </button>
+                                <button className='bg-[#01C6B5] cursor-pointer text-white py-3 px-6  font-semibold hover:opacity-90 transition w-full md:w-auto'>
+                                    Checkout
+                                </button>
                             </div>
                         </div>
                     </div>

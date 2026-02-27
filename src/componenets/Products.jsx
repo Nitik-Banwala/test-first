@@ -2,16 +2,10 @@ import LikeButton from './common/Likebutton';
 import { useContext } from 'react';
 import { CartContext } from '../componenets/CartContext';
 import Navbutton from './common/Navbutton';
+import { ProductsData } from '../utils/Data';
 
 const Products = () => {
     const { addToCart } = useContext(CartContext);
-
-    const productsData = [
-        { id: 1, name: 'Round Yoga Mat', price: '14.95', image: '/Products1.png' },
-        { id: 2, name: 'Non-Slip Travel Yoga Mat', price: '14.95', image: '/Products2.png' },
-        { id: 3, name: 'Foldable Yoga Mat', price: '31.95', image: '/Products3.png' }
-    ];
-
     return (
         <div className="max-[640px]:flex max-[640px]:flex-col">
             <div className='max-w-285 h-full mx-auto mt-20 sm:mt-24 lg:mt-32.5 px-4 sm:px-6 lg:px-0 font-["Outfit",sans-serif]'>
@@ -26,7 +20,7 @@ const Products = () => {
                 </div>
 
                 <div className='max-w-285 h-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6'>
-                    {productsData.map((product) => (
+                    {ProductsData.map((product) => (
                         <div key={product.id} className='group'>
                             <div className='relative bg-[#F5F5F5] flex justify-center items-center max-w-91 h-110.25  hover:bg-[#0000004D]  transition-transform duration-200'>
 
