@@ -197,7 +197,7 @@ export const Trendingcards = [{
     price: '33.00',
     des1: 'Sculpting, slimming, supportive, stretchy, ',
     des2: 'stylish, seamless',
-    image: 'public/tra3.jpg'
+    image: '/tra3.jpg'
 }, {
     id: 4,
     heading: 'Ultra Shaping Leggings',
