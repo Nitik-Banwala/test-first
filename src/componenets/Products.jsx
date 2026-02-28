@@ -52,8 +52,8 @@ const Products = () => {
                     <Slider ref={sliderRef} {...settings}>
                         {ProductsData.map((product) => (
                             <div key={product.id} className="px-2 sm:px-3 max-w-285 flex justify-center items-center">
-                                <div className="group flex flex-col ">
-                                    <div className="bg-[#F5F5F5] flex justify-center items-center max-w-91 max-h-123 aspect-3/4">
+                                <div className=" flex flex-col ">
+                                    <div className="bg-[#F5F5F5] group  flex justify-center items-center max-w-91 max-h-123 aspect-3/4">
                                         <div className="absolute top-0 left-0 right-0 p-3 flex justify-between items-center z-10">
                                             <div className="bg-white px-3 py-1.5 rounded-full text-sm sm:text-base font-medium shadow-sm">
                                                 €{product.price}
