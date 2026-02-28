@@ -197,6 +197,22 @@ export const Trendingcards = [{
     price: '33.00',
     des1: 'Sculpting, slimming, supportive, stretchy, ',
     des2: 'stylish, seamless',
-    image: '/tranding3.png'
+    image: 'public/tra3.jpg'
+}, {
+    id: 4,
+    heading: 'Ultra Shaping Leggings',
+    price: '42.00',
+    des1: 'Sculpting, slimming, supportive, stretchy, ',
+    des2: 'stylish, seamless',
+    image: '/img9.png'
+},
+
+{
+    id: 5,
+    heading: 'Horts and One-Strap Bra',
+    price: '50.00',
+    des1: 'Sculpting, slimming, supportive, stretchy,  ',
+    des2: 'stylish, seamless',
+    image: '/img10.png'
 },
 ]
