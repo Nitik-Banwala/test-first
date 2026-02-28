@@ -14,7 +14,7 @@ const Categary = () => {
                     <h1 className='font-semibold  text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>Shop Our Categories</h1>
                     <p className='font-normal text-[#414143] text-sm sm:text-base md:text-lg lg:text-[20px]  mt-2'>Use this area to describe the collection.</p>
                 </div>
-                <button className='w-full sm:w-auto px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-3 lg:h-14.25 border-0 bg-[#01C6B5] text-white font-medium hover:bg-[#00a896] transition-colors whitespace-nowrap'>View All </button>
+                <button className='w-full sm:w-auto px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-3 lg:h-14.25 border-0 bg-[#01C6B5] text-white font-medium hover:bg-[#00a896] transition-colors whitespace-nowrap cursor-pointer '>View All </button>
             </div>
             <div className='grid grid-cols-1  max-w-360 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mt-6 sm:mt-8 md:mt-12.5  sm:max-w-2xl md:max-w-3xl lg:max-w-285 mx-auto px-4  sm:px-6 md:px-8 lg:px-0'>
                 {Carddata.map((cards) => (

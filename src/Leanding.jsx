@@ -13,7 +13,7 @@ import Footer from './componenets/Footer'
 
 const Leanding = () => {
   return (
-      <div>
+      <div className='max-w-360 mx-auto w-full'>
           <Navbar />
           <Slider />
           <Products/>

@@ -12,7 +12,7 @@ const Blog = () => {
                         From The Blog
                     </h1>
 
-                    <button className="bg-[#01C6B5] font-medium text-base sm:text-lg lg:text-xl leading-[100%] text-white py-3 sm:py-4 px-5 sm:px-6.5">
+                    <button className="bg-[#01C6B5] cursor-pointer font-medium text-base sm:text-lg lg:text-xl leading-[100%] text-white py-3 sm:py-4 px-5 sm:px-6.5">
                         View All Blogs
                     </button>
 

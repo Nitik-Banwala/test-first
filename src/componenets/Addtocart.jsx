@@ -56,7 +56,9 @@ const Addtocart = () => {
                         {cartItems.map((item, index) => (
                             <div key={index} className='flex flex-col md:flex-row justify-between items-start md:items-center border-b border-[#4141431A] p-4 gap-4'>
                                 <div className='flex-1 flex items-start md:items-center gap-4'>
-                                    <img src={item.image} alt={item.name} className='w-20 h-20 bg-[#ebeaea] sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover' />
+                                    <div className='w-20 h-20 bg-[#ebeaea] sm:w-24 sm:h-24 md:w-28 md:h-28'>
+                                        <img src={item.image} alt={item.name} className=' object-cover' />
+                                    </div>
                                     <div className='flex flex-col'>
                                         <span className='font-medium'>{item.name}</span>
                                         <span className='text-sm text-gray-600'>€{item.price}</span>
@@ -66,16 +68,16 @@ const Addtocart = () => {
                                 <div className='flex items-center md:flex-none border border-[#4141431A]  overflow-hidden'>
                                     <button
                                         className='bg-[#414143] cursor-pointer px-4 py-2 flex justify-center items-center text-white hover:opacity-80'
-                                        
+
                                     >
                                         -
                                     </button>
                                     <div className='px-4 py-2 flex justify-center items-center'>
-                                       1 
+                                        1
                                     </div>
                                     <button
                                         className='bg-[#01C6B5] cursor-pointer px-4 py-2 flex justify-center items-center text-white hover:opacity-80'
-                                        
+
                                     >
                                         +
                                     </button>
@@ -91,7 +93,7 @@ const Addtocart = () => {
                                     </button>
                                 </div>
                                 <div className='flex-1 text-left md:text-right mt-2 md:mt-0'>
-                                    
+
                                 </div>
                             </div>
                         ))}

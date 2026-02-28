@@ -46,12 +46,12 @@ const Trending = () => {
 
     return (
         <div>
-            <div className='mb-8 sm:mb-12.5 mt-35 p-4 flex flex-col max-w-285 mx-auto sm:flex-row sm:justify-between gap-4 sm:gap-0'>
-                <div className='flex flex-col sm:flex-none justify-center items-center sm:items-start'>
-                    <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold'>Trending Products</h1>
+            <div className='mb-8 sm:mb-12.5 mt-16 md:mt-35   p-4 flex flex-col max-w-285 mx-auto sm:flex-row sm:justify-between gap-4 sm:gap-0'>
+                <div className='flex flex-col  sm:flex-none justify-center items-center sm:items-start'>
+                    <h1 className='text-2xl  sm:text-3xl md:text-4xl lg:text-5xl font-semibold'>Trending Products</h1>
                     <p className='text-base sm:text-lg md:text-[20px] font-normal text-gray-600 mt-1 sm:mt-2'>Use this area to describe the collection.</p>
                 </div>
-                <div className='sm:flex hidden flex-row gap-3.5 mt-6.25'>
+                <div className='sm:flex hidden  flex-row gap-3.5 mt-6.25'>
                     <Navbutton onNext={nextSlide} onPrev={prevSlide} />
                 </div>
             </div>

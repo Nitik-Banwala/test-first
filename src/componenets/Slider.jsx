@@ -13,15 +13,15 @@ const Slider = () => {
         return () => clearInterval(interval)
     }, [Slides.length])
     return (
-        <div>
-            <div className='slider relative w-full overflow-hidden'>
-                <div className='relative sm:mt-29 w-full h-screen'>
+        <div className='max-w-360 mx-auto' >
+            <div className='slider relative max-w-360 mt-25 sm:mt-29 mx-auto max-h-196.75  overflow-hidden'>
+                <div className='relative w-full h-screen'>
                     {Slides.map((slide, index) => (
                         <div
                             key={slide.id}
                             className={`slides z-10  h-screen bg-cover bg-center absolute w-full   transition-opacity duration-1000 ${
                                 index === currentSlide ? 'opacity-100' : 'opacity-0'
-                            }`}
+                                } bg-cover ${slide.id === 1 || slide.id === 2 ? 'bg-center sm:bg-center md:bg-center' : ''}`}
                             style={{ backgroundImage: `url('${slide.image}')` }} 
                         >
                             <div className='z-20 text-white max-w-full sm:max-w-3xl md:max-w-149.5  font-["Outfit",sans-serif] px-4 sm:px-8 md:ml-37.5 pt-12 sm:pt-20 md:pt-58 h-full flex flex-col  max-[768px]:text-center max-[768px]:items-center max-[768px]:justify-center'>

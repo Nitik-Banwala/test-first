@@ -96,21 +96,21 @@ export const Handarrow = () => {
   )
 }
 
-export const Next = () => {
-  return (
-      <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.000328064 1.41409L1.41433 9.05991e-05L8.48633 7.07009L1.41433 14.1421L0.000328064 12.7281L5.65733 7.07109L0.000328064 1.41409Z" fill="#414143" className=' group-hover:fill-white ' />
-      </svg>
-  )
-}
+// export const Next = () => {
+//   return (
+//       <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M0.000328064 1.41409L1.41433 9.05991e-05L8.48633 7.07009L1.41433 14.1421L0.000328064 12.7281L5.65733 7.07109L0.000328064 1.41409Z" fill="#414143" className=' group-hover:fill-white ' />
+//       </svg>
+//   )
+// }
 
-export const Prev = () => {
-  return (
-      <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8.486 12.728L7.072 14.142L0 7.072L7.072 0L8.486 1.414L2.829 7.071L8.486 12.728Z" fill="#414143" className=' group-hover:fill-white ' />
-      </svg>
-  )
-}
+// export const Prev = () => {
+//   return (
+//       <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M8.486 12.728L7.072 14.142L0 7.072L7.072 0L8.486 1.414L2.829 7.071L8.486 12.728Z" fill="#414143" className=' group-hover:fill-white ' />
+//       </svg>
+//   )
+// }
 
 
 export const Navlogo = () => {
