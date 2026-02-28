@@ -60,14 +60,14 @@ const Products = () => {
                                             </div>
                                             <LikeButton />
                                         </div>
-                                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
-                                            <button
-                                                onClick={() => addToCart(product)}
-                                                className="bg-teal-500 text-white px-5 py-2 text-sm sm:text-base hover:opacity-90 transition-opacity"
-                                            >
-                                                Add to cart
-                                            </button>
-                                        </div>
+                                       <div className='absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-all duration-200 opacity-0 group-hover:opacity-100'>
+                                        <button
+                                            onClick={() => addToCart(product)}
+                                            className='cursor-pointer active:bg-[#007a70] bg-[#01C6B5] px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-white hover:opacity-90 transition'
+                                        >
+                                            Add to cart
+                                        </button>
+                                    </div>
                                         <img
                                             src={product.image}
                                             alt={product.name}
